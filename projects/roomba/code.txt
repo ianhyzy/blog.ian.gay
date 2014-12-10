@@ -1,0 +1,213 @@
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">#Button Mappings</span>
+<span style="color: #408080; font-style: italic">#</span>
+<span style="color: #408080; font-style: italic">#00 : Select = Reset</span>
+<span style="color: #408080; font-style: italic">#03 : Start = Failsafe</span>
+<span style="color: #408080; font-style: italic">#12 : Triangle = Vaccum on/off</span>
+<span style="color: #408080; font-style: italic">#13 : Circle = Spot Clean</span>
+
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">serial</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">time</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">pygame</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">struct</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sys</span>
+
+MAX_TURN_RADIUS <span style="color: #666666">=</span> <span style="color: #666666">1000</span>
+controlRoomba <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+spotCleanActive <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+vacuumActive <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+
+<span style="color: #408080; font-style: italic">#Open serial connection, 115200 is default Roomba BAUD rate</span>
+<span style="color: #008000; font-weight: bold">global</span> ser
+ser <span style="color: #666666">=</span> serial<span style="color: #666666">.</span>Serial(<span style="color: #BA2121">&#39;/dev/ttyUSB0&#39;</span>, <span style="color: #666666">115200</span>)
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">start</span>():
+    <span style="color: #408080; font-style: italic"># Start SCI - puts into safe mode</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">128</span>))
+    <span style="color: #408080; font-style: italic"># Enable the safe mode</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">131</span>))
+    <span style="color: #408080; font-style: italic"># this is required or the command may fail</span>
+    <span style="color: #408080; font-style: italic">#time.sleep(1)</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">fix</span>(num):
+    <span style="color: #408080; font-style: italic"># format the number correctly in hex</span>
+    num <span style="color: #666666">=</span> struct<span style="color: #666666">.</span>unpack(<span style="color: #BA2121">&#39;&gt;BB&#39;</span>, struct<span style="color: #666666">.</span>pack(<span style="color: #BA2121">&#39;&gt;h&#39;</span>, num))
+    <span style="color: #408080; font-style: italic">#print num</span>
+    <span style="color: #008000; font-weight: bold">return</span> num[<span style="color: #666666">0</span>], num[<span style="color: #666666">1</span>]
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">move</span>(vel, rad):
+
+    <span style="color: #408080; font-style: italic"># velocity</span>
+    vbit1, vbit2 <span style="color: #666666">=</span> fix(vel)
+    <span style="color: #408080; font-style: italic">#radius</span>
+    rbit1, rbit2 <span style="color: #666666">=</span> fix(rad)
+
+    <span style="color: #408080; font-style: italic"># send to roomba</span>
+    <span style="color: #408080; font-style: italic"># Init move command</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">137</span>))
+
+    <span style="color: #408080; font-style: italic"># you need this</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(vbit1))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(vbit2))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(rbit1))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(rbit2))
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">reset</span>():
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Resetting Roomba...&quot;</span>
+    start()
+    move(<span style="color: #666666">0</span>, <span style="color: #666666">0</span>)
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">63</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">32</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">1.5</span>)
+    control()
+ 
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">failsafe</span>():
+    <span style="color: #008000; font-weight: bold">global</span> vacuumActive
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Failsafe called&quot;</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">131</span>)) <span style="color: #408080; font-style: italic">#Safe mode</span>
+    move(<span style="color: #666666">0</span>, <span style="color: #666666">0</span>) <span style="color: #408080; font-style: italic">#Stop Moving</span>
+    <span style="color: #008000; font-weight: bold">if</span> (vacuumActive):
+        vacuum() <span style="color: #408080; font-style: italic"># Disable vacuum</span>
+    
+    <span style="color: #408080; font-style: italic">#Blink red light 3 times</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.7</span>)
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.7</span>)
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.7</span>)
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.7</span>)
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.7</span>)
+    
+    <span style="color: #408080; font-style: italic">#Turn Roomba off</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">133</span>))
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Roomba now in failsafe mode&quot;</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">spotClean</span>():
+    <span style="color: #008000; font-weight: bold">global</span> spotCleanActive
+    <span style="color: #008000; font-weight: bold">if</span> spotCleanActive <span style="color: #666666">==</span> <span style="color: #008000">True</span>:
+        <span style="color: #408080; font-style: italic">#Stop spot clean</span>
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Stopping spot clean.&quot;</span>
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">134</span>))
+        spotCleanActive <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+        reset()
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #408080; font-style: italic">#Start spot clean</span>
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Starting spot clean.&quot;</span>
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">134</span>))
+        spotCleanActive <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+        time<span style="color: #666666">.</span>sleep(<span style="color: #666666">.25</span>)
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">vacuum</span>():
+    <span style="color: #008000; font-weight: bold">global</span> vacuumActive
+    <span style="color: #008000; font-weight: bold">if</span> vacuumActive <span style="color: #666666">==</span> <span style="color: #008000">True</span>:
+        <span style="color: #408080; font-style: italic">#Stop vacuuming</span>
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Stopping vacuum.&quot;</span>
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">138</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+        vacuumActive <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+        time<span style="color: #666666">.</span>sleep(<span style="color: #666666">1</span>)
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #408080; font-style: italic">#Start vacuuming</span>
+        <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Starting vacuum.&quot;</span>
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">138</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">1</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">138</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">2</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">138</span>))
+        ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">3</span>))
+        vacuumActive <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+        time<span style="color: #666666">.</span>sleep(<span style="color: #666666">1</span>)
+    
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">control</span>():
+
+    <span style="color: #008000; font-weight: bold">global</span> MAX_TURN_RADIUS
+
+    <span style="color: #408080; font-style: italic">#turn light to green</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>)) <span style="color: #408080; font-style: italic">#Green</span>
+    ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+    
+    pygame<span style="color: #666666">.</span>init()
+    pygame<span style="color: #666666">.</span>joystick<span style="color: #666666">.</span>init()
+    clock <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>time<span style="color: #666666">.</span>Clock()
+    joystick <span style="color: #666666">=</span> pygame<span style="color: #666666">.</span>joystick<span style="color: #666666">.</span>Joystick(<span style="color: #666666">0</span>)
+    joystick<span style="color: #666666">.</span>init()
+
+    <span style="color: #408080; font-style: italic">#print joystick.get_name()</span>
+    <span style="color: #408080; font-style: italic">#print joystick.get_numaxes()</span>
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Reset complete.&quot;</span>
+    
+    <span style="color: #008000; font-weight: bold">while</span> controlRoomba <span style="color: #666666">==</span> <span style="color: #008000">True</span>:
+
+        <span style="color: #008000; font-weight: bold">for</span> event <span style="color: #AA22FF; font-weight: bold">in</span> pygame<span style="color: #666666">.</span>event<span style="color: #666666">.</span>get():
+                <span style="color: #008000; font-weight: bold">if</span> event<span style="color: #666666">.</span>type <span style="color: #666666">==</span> pygame<span style="color: #666666">.</span>JOYBUTTONUP:
+                    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Button&#39;</span>
+
+        <span style="color: #008000; font-weight: bold">if</span> joystick<span style="color: #666666">.</span>get_button(<span style="color: #666666">0</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+            reset()
+        <span style="color: #008000; font-weight: bold">elif</span> joystick<span style="color: #666666">.</span>get_button(<span style="color: #666666">3</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+            failsafe()
+        <span style="color: #008000; font-weight: bold">elif</span> joystick<span style="color: #666666">.</span>get_button(<span style="color: #666666">12</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+            vacuum()
+        <span style="color: #008000; font-weight: bold">elif</span> joystick<span style="color: #666666">.</span>get_button(<span style="color: #666666">13</span>) <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+            spotClean()
+        <span style="color: #008000; font-weight: bold">else</span>:
+        
+            speed <span style="color: #666666">=</span> <span style="color: #666666">-1*</span><span style="color: #008000">int</span>(<span style="color: #666666">500*</span>joystick<span style="color: #666666">.</span>get_axis(<span style="color: #666666">1</span>))
+
+            jsa <span style="color: #666666">=</span> joystick<span style="color: #666666">.</span>get_axis(<span style="color: #666666">2</span>)
+            <span style="color: #008000; font-weight: bold">if</span> (jsa <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>):
+                <span style="color: #408080; font-style: italic"># Right, +1 as Max, Negative output</span>
+                radius <span style="color: #666666">=</span> <span style="color: #666666">-1*</span>((MAX_TURN_RADIUS<span style="color: #666666">+1</span>)<span style="color: #666666">-</span><span style="color: #008000">int</span>(MAX_TURN_RADIUS<span style="color: #666666">*</span>jsa))
+            <span style="color: #008000; font-weight: bold">elif</span> (jsa <span style="color: #666666">==</span> <span style="color: #666666">0</span>):
+                radius <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+            <span style="color: #008000; font-weight: bold">else</span>:
+                <span style="color: #408080; font-style: italic"># Left, -1 as Max, Positive output</span>
+                radius <span style="color: #666666">=</span> <span style="color: #666666">1*</span>((MAX_TURN_RADIUS<span style="color: #666666">+1</span>)<span style="color: #666666">+</span><span style="color: #008000">int</span>(MAX_TURN_RADIUS<span style="color: #666666">*</span>jsa))
+    
+
+        move(speed, radius)
+    
+        clock<span style="color: #666666">.</span>tick(<span style="color: #666666">20</span>)    
+
+<span style="color: #408080; font-style: italic"># do stuff</span>
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Starting...&quot;</span>
+<span style="color: #408080; font-style: italic">#turn light to green</span>
+ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">139</span>))
+ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">0</span>))
+ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">16</span>))
+ser<span style="color: #666666">.</span>write(<span style="color: #008000">chr</span>(<span style="color: #666666">255</span>))
+<span style="color: #008000; font-weight: bold">try</span>:
+    start() <span style="color: #408080; font-style: italic">#Make the light work correctly</span>
+    reset()
+<span style="color: #008000; font-weight: bold">except</span>:
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;Fetal error in program&quot;</span>
+    failsafe()
+    <span style="color: #408080; font-style: italic">#raise</span>
+    pygame<span style="color: #666666">.</span>quit()
+    sys<span style="color: #666666">.</span>exit(<span style="color: #666666">-1</span>)
+
+
+<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Exiting...&#39;</span>
+pygame<span style="color: #666666">.</span>quit()
+</pre></div>

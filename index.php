@@ -30,9 +30,9 @@
     <?php include 'navbar.php'; ?>
 
     <div class="jumbotron center">
-      <h1>Create an awesome media server</h1>
-      <p>With just a few hours, you can turn an old computer into a streaming machine.</p>
-      <p><a class="btn btn-primary btn-lg" href="/projects/mediaserver/setup.php">More Information</a></p>
+      <h1>A vacuum with drive.</h1>
+      <p>Turn your old roomba into a driving machine.</p>
+      <p><a class="btn btn-primary btn-lg" href="/projects/roomba/roomba.php">More Information</a></p>
     </div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
