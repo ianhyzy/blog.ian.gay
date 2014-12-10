@@ -100,6 +100,13 @@ body {
   margin-bottom: 5em;
 }
 
+.side-img {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  margin-top: 5em;
+
+}
 
 /* marriage page */
 .pitch {
@@ -114,7 +121,7 @@ body {
   font-family: monospace;
 }
 
-/* muh nav bar */
+/* nav bar */
 .nav-list-item {
   font-size: 14px;
 }
