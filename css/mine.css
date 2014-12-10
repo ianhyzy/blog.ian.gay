@@ -91,6 +91,13 @@ body {
   box-shadow: 0 0 30px black;
 }
 
+/* images */
+.featured_img {
+  width: 40%;
+  margin-bottom: 5em;
+}
+
+
 /* marriage page */
 .pitch {
   font-size: 18px;
