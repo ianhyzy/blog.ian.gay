@@ -30,7 +30,7 @@
     <?php include 'navbar.php'; ?>
 
     <div class="jumbotron center">
-      <h1>Create an amazing media server</h1>
+      <h1>Butts.</h1>
       <p>With just a few hours, you can turn an old computer into a streaming machine.</p>
       <p><a class="btn btn-primary btn-lg" href="/projects/mediaserver/setup.php">More Information</a></p>
     </div>
