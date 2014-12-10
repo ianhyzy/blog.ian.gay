@@ -30,7 +30,7 @@
     <?php include($_SERVER['DOCUMENT_ROOT'].'/navbar.php') ?>
 
     <div class="row">
-      <div class="col-lg-10 content">
+      <div class="col-lg-12">
         <div class="jumbotron center">
           <h1>A vacuum with drive.</h1>
           <p>Turn your old roomba into a driving machine.</p>
