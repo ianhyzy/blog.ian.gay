@@ -32,7 +32,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="jumbotron center">
-          <h1>A vacuum with DRIVE.</h1>
+          <h1>A vacuum with drive.</h1>
           <p>Turn your old roomba into a driving machine.</p>
           <img src="img/projects/roomba/roomba.jpg" class="featured_img" />
           <p><a class="btn btn-primary btn-lg" href="/projects/roomba/roomba.php">More Information</a></p>
