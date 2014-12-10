@@ -27,7 +27,7 @@
   <body>
 
     <!-- Navbar -->
-    <?php include 'navbar.php'; ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'].'/navbar.php') ?>
 
     <div class="jumbotron center">
       <h1>Something went horribly wrong.</h1>
