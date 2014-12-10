@@ -54,8 +54,6 @@ qacct:"p-0x5KvXV4TpMkA"
             </li>
             <li><a href="/aboutme.php"><i class="fa fa-comment"></i>About Me</a>
             </li>
-            <li><a href="https://medium.com/@AgentDrTran" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
-            </li>
         </ul>
     </div>
 </div>
