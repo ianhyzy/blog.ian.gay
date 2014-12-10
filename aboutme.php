@@ -31,9 +31,8 @@
     <div class="row">
       <div class="col-lg-12 content">
         <h1 title="TWO FOUR SIX OH ONE!">Who am I?</h1>
-        <p>I'm a Managemnt Informaiton Systems student at the Milwaukee School of Engineering in Milwaukee, Wisconsin.</p>
-        <p>I've always loved web design and the technical arts, and now I'm learning those skills along with many more.</p>
-        <p>The site looks quite bare right now, but that's only becuase I don't know what to put on here.</p>
+        <p>I'm a Managemnt Informaiton Systems student at the Milwaukee School of Engineering in Milwaukee, Wisconsin. I've always loved web design and the technical arts, and now I'm learning those skills along with many more. The site looks quite bare right now, but that's only becuase I don't know what to put on here.</p>
+        <p><a href="https://docs.google.com/document/d/1xY08uLM6KHl8ZOqKhBYaDf11hVTDdrkw-fxd6WUhU0k/edit?usp=sharing" target="_blank">Click here</a> to view my formal résumé online.</p>
         <h3>About this site</h3>
         <p>This website uses Nginx on a Ditital Ocean server and is protected with CloudFlare. Changes are made and tracked with a private GitHub repositoy, which the DigitalOcean droplet pulls every ten minutes.</p>
         <p>I used the <a href="http://getbootstrap.com/">Bootstrap</a> framework to layout the site, and I used <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> to display the icons.</p>
