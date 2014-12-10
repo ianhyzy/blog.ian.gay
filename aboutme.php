@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IanHyzy.tk</title>
+    <title>IanHyzy.me</title>
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -30,12 +30,12 @@
 
     <div class="row">
       <div class="col-lg-12 content">
-        <h1 title="TWO FOUR SIX OH ONEEEEEEEEE!">Who am I?</h1>
-        <p>I figured a personal site without an "About Me" page would be somewhat strange. Using a free domain from a territory owned by New Zealand is also strange, but it was also free! I built this site to record projects and advertise my fantastic marriage services.</p>
-        <blockquote>
-          <p>Our site needs to have a big, eye catching jumbotron on the home page. Give the site a fresh, clean feeling, with lots of whitespace. We need some quotes and pictures of publications that talked about us on there, too. And don't forget the .io domain! That's how people will know we're hip and tech-oriented company.</p>
-          <small>Everyone building a website for a startup</small>
-        </blockquote>
+        <h1 title="TWO FOUR SIX OH ONE!">Who am I?</h1>
+        <p>I'm a Managemnt Informaiton Systems student at the Milwaukee School of Engineering in Milwaukee, Wisconsin.</p>
+        <p>I've always loved web design and the technical arts, and now I'm learning those skills along with many more.</p>
+        <h3>About this site.</h3>
+        <p>This website uses Nginx on a Ditital Ocean server and is protected with CloudFlare. Changes are made and tracked with a private GitHub repositoy, which the DigitalOcean droplet pulls every ten minutes.</p>
+        <p>I used the <a href="http://foundation.zurb.com/">Foundation</a>framework to layout the site, and I used <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> to display the icons.</p>
       </div>
     </div>
 
