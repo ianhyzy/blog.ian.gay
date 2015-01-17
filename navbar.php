@@ -1,3 +1,4 @@
+<!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -8,6 +9,7 @@
   ga('send', 'pageview');
 
 </script>
+
 <!-- Quantcast Tag -->
 <script type="text/javascript">
   var _qevents = _qevents || [];
@@ -32,6 +34,9 @@
   </div>
 </noscript>
 <!-- End Quantcast tag -->
+
+
+<!-- Navbar -->
 <div class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
