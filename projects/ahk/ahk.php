@@ -10,6 +10,7 @@
 
     <!-- Navbar -->
     <?php include($_SERVER['DOCUMENT_ROOT'].'/navbar.php') ?>
+    
     <div class="col-md-2">
       <a href="http://youtu.be/dQw4w9WgXcQ" target="_blank"><img class="side-img" src="/img/projects/cabbage/ad_1.jpg" /></a>
     </div>
@@ -38,7 +39,7 @@ return
       </pre>
     </div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scroll.js"></script>
   </body>
 </html>
