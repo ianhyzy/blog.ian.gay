@@ -9,9 +9,11 @@
   padding-left: 14%;
   padding-right: 7%;
 }
+/*
 a:link {
   color: #2068b7;
 }
+*/
 .link:hover {
   color: rgba(16, 129, 255, 0.61);
 }
