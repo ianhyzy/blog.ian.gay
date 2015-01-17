@@ -11,14 +11,20 @@
 }
 /*
 a:link {
-  color: #2068b7;
+color: #2068b7;
 }
 */
 .link:hover {
   color: rgba(16, 129, 255, 0.61);
 }
+p {
+}
 pre {
+  display: block;
   font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+  border: none;
 }
 h1 {
   font-size: 34px;
@@ -106,7 +112,7 @@ body {
   width: 100%;
   max-width: 300px;
   min-width: 200px;
-  margin-top: 5em;
+  margin-top: 2.5em;
 
 }
 
