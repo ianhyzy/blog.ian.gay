@@ -26,6 +26,9 @@ pre {
   margin: 1em 0;
   border: none;
 }
+.pad-top {
+  margin-top: 2.5em;
+}
 h1 {
   font-size: 34px;
   display: inline-block;
@@ -112,8 +115,6 @@ body {
   width: 100%;
   max-width: 300px;
   min-width: 200px;
-  margin-top: 2.5em;
-
 }
 
 /* marriage page */
