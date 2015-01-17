@@ -23,7 +23,7 @@
           <p>Wiring the Pi and the Roomba together took some work. However, it ended up being relatively simple. The Roomba accepts serial command through a mini-din port under the "hood" (a plastic plate that's on top of the roomba); the same port also provides power. The real challenge was getting a PlayStation remote to connect to the Pi. This was made possible with a bluetooth adapter and the Sixaxis library, but Bluetooth on Linux is flaky, game controllers especially. The Bluetooth connection doesn't go more than 15-20 feet.</p>
         </div>
         <div class="col-sm-4">
-        <img src="/img/projects/roomba/roomba.jpg" class="side-img" />
+        <img src="/img/projects/roomba/roomba.jpg" class="side-img pad-top" />
         </div>
       </div>
       <div class="row">
