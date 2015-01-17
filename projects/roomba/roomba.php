@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <?php include($_SERVER['DOCUMENT_ROOT'].'/head.php') ?>
-    <title>ianhyzy.me</title>
+    <title>A Robot With Drive</title>
   </head>
 
   <body>

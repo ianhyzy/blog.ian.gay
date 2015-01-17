@@ -57,7 +57,7 @@
           </li>
           <!-- <li class="nav-list-item"><a href="/projects/cabbage.php"><i class="fa fa-cc fa-fw"></i>Cabbage Clicker</a>
 </li> -->
-            <li class="nav-list-item"><a href="/projects/ahk.php"><i class="fa fa-laptop fa-fw"></i>AutoHotkey Essentials</a>
+            <li class="nav-list-item"><a href="/projects/ahk/ahk.php"><i class="fa fa-laptop fa-fw"></i>AutoHotkey Essentials</a>
           </li>
         </ul>
       </li>
