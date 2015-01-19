@@ -61,8 +61,7 @@
           </li>
         </ul>
       </li>
-      <li><a href="/aboutme.php"><i class="fa fa-comment"></i>About Me</a>
-      <li><a href="blog.php"><i class="fa fa-newspaper-o"></i>Blog</a></li>
+      <li><a href="/aboutme.php"><i class="fa fa-comment"></i>About</a>
       </li>
     </ul>
 </div>
