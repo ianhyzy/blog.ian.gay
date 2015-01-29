@@ -11,9 +11,10 @@
     <!-- Navbar -->
     <?php include($_SERVER['DOCUMENT_ROOT'].'/navbar.php') ?>
     
-    <div class="col-md-2">
-      <a href="http://youtu.be/dQw4w9WgXcQ" target="_blank"><img class="side-img pad-top" src="/img/projects/cabbage/ad_1.jpg" /></a>
-    </div>
+    
+    <div class="col-md-2"><!--
+      <a href="http://youtu.be/dQw4w9WgXcQ" target="_blank"><img class="side-img pad-top" src="/img/projects/cabbage/ad_1.jpg" /></a>-->
+    </div> 
     <div class="col-md-6">
       <div class="center">
         <h1>Essential AutoHotkey Scripts for Windows</h1>
