@@ -1,0 +1,31 @@
+.jive-icon-page-sml {
+    background-image: url( ../images/page-12x12.png);
+    background-position: 0 0;
+}
+
+.jive-icon-page-med {
+    background-image: url( ../images/page-16x16.png);
+    background-position: 0 0;
+}
+
+.jive-icon-page-bookmark {
+    background-image: url( ../images/page-bookmark-16x16.png);
+}
+
+.jive-icon-page-big {
+    background-image: url( ../images/page-24x24.png);
+    background-position: 0 0;
+}
+
+.jive-icon-page {
+    background-image: url( ../images/page-24x24.png);
+    background-position: 0 0;
+}
+
+.jive-link-page {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding: 2px 0 2px 20px;
+    background: transparent url( ../images/page-16x16.png ) no-repeat top left;
+    padding-top: 1px;
+}

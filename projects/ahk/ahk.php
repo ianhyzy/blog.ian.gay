@@ -28,7 +28,6 @@
         <p>Your Account: C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p>
         <p>All Users: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 </p>
-        
       </div>
     </div>
     <div class="col-md-4 pad-top">

@@ -1,0 +1,18 @@
+#jive-nitro-admin-modal{height:800px;width:90%;}
+#jive-nitro-admin-modal iframe{height:725px;max-height:725px;width:100%;}
+.j-nitro-activity .j-nitro-activity-type{margin-right:5px;}
+.j-nitro-activity .j-nitro-activity-icon{height:16px;top:2px;margin-right:5px;}
+.j-nitro-activity .j-nitro-activity-name{font-weight:bold;}
+#reputation-spacer{display:inline-block;}
+#reputation-menu-link{display:inline-block;min-width:75px;}
+#reputation-menu-link .reputation-points-loading{font-weight:normal;}
+#reputation-menu-link .reputation-points-ready{color:#F2AA00;font-weight:bold;}
+#navReputationCenter .reputation-points-ready{font-weight:bold;}
+.j-people-thumb footer img{height:16px;width:16px;}
+.nitro-annual-points{font-size:75%;font-style:italic;}
+.nitro-history-complete{margin-top:15px;}
+#g-challenge-mini-modal .g-challenge-wrapper{height:60px;margin-bottom:10px;position:relative;}
+#g-challenge-mini-modal .g-challenge-image{height:50px;width:50px;padding-right:10px;}
+#g-challenge-mini-modal .g-challenge-description{position:absolute;top:15%;}
+#g-challenge-mini-modal .g-recently-completed{font-weight:bold;border-bottom:1px;}
+#j-js-nitro-history a.nitro-challenge-link img{height:46px;width:46px;}
