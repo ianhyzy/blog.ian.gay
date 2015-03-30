@@ -1,0 +1,217 @@
+/* Widgets.less
+ * Base styles required by Wordpress plugins to function.
+ * 
+ * In these styles, DO include basic layout for all elements that are rendered by Wordpress.
+ *
+ * DO NOT include detailed styles like fonts and colors, DO NOT include styles for Jive rendered output
+ *
+ * ------------------------------------------------------------------ */
+/* Preboot.less
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+.clearBackground {
+  background: transparent none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hiddenClearfix {
+  overflow: hidden;
+  height: 100%;
+}
+.inlineBlock {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.centerBlock {
+  display: block;
+  margin: 0 auto;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+#rotatorContainer {
+  position: relative;
+  overflow: hidden;
+  height: 367px;
+}
+#mainRotator {
+  position: relative;
+}
+#mainRotator img {
+  max-width: 3000px;
+}
+#mainRotator,
+#mainRotator .item {
+  height: 367px;
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+}
+#mainRotator .item {
+  display: none;
+}
+#mainRotator .item,
+#mainRotator .item .slideItem,
+#mainRotator .item .slide-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slideItem {
+  margin-left: 50%;
+  left: -490px;
+  opacity: 0;
+}
+.slideActive {
+  z-index: 999;
+}
+#mainRotator .textSlide h1,
+#mainRotator .textSlide h4,
+#mainRotator .textSlide p {
+  color: #FFF;
+}
+#rotatorNav {
+  position: absolute;
+  left: 50%;
+  margin-left: 380px;
+  top: 30px;
+  width: 85px;
+  z-index: 1000;
+}
+#rotatorNav a {
+  display: block;
+  height: 85px;
+  padding: 5px;
+  width: 75px;
+  background: #ffffff;
+  margin: 0px 0px 15px 0px;
+  float: left;
+}
+#rotatorNav a p {
+  text-align: center;
+  margin: 5px 0;
+}
+.ngg-galleryoverview {
+  margin-top: 0;
+}
+.ngg-gallery-thumbnail {
+  position: relative;
+  margin-right: 0px;
+}
+.ngg-gallery-thumbnail img,
+.ngg-gallery-thumbnail:hover img {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.ngg-gallery-thumbnail span {
+  display: none;
+  margin: 0;
+}
+.ngg-gallery-thumbnail:hover span {
+  position: absolute;
+  padding: 0;
+  display: block;
+  top: 0;
+  left: 0;
+  color: #fff;
+  width: 120px;
+  height: 90px;
+  padding: 50px 15px 10px 15px;
+}
+.ngg-gallery-thumbnail:hover span a {
+  color: #fff;
+  text-decoration: underline;
+}
+.number_list {
+  background: url(../images/sprite-number_list.png) 0 0 no-repeat;
+  height: 65px;
+  width: 80px;
+  text-align: center;
+  padding-top: 15px;
+}
+.number_list h1 {
+  color: #fff;
+  font-size: 50px;
+}
+.number_list.style_two {
+  background-position: 0px -100px;
+}
+.number_list.style_three {
+  background-position: 0px -200px;
+}
+ul.highlighted li {
+  line-height: 22px;
+  list-style-image: url(../images/icon-check.png);
+  margin-bottom: 10px;
+}
+ul.block_links_list.jumbo {
+  margin-bottom: 0;
+}
+ul.block_links_list.jumbo a {
+  color: #A40900;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 27px;
+}
+ul.block_links_list.jumbo li:last-child {
+  border-bottom: none;
+}
+.byline {
+  margin-top: 20px;
+}
+.byline h5 {
+  background: none;
+  text-transform: none;
+  font-size: 16px;
+}
+.byline a.cta_text {
+  font-size: 16px;
+}
+.announcement {
+  background: #fdf39e;
+  padding: 10px;
+  margin: 10px 0;
+}
+.announcement h5 {
+  margin: 0px;
+}
+.announcement p {
+  margin: 0px;
+}
+#category-selector a.active {
+  color: #a40900;
+}

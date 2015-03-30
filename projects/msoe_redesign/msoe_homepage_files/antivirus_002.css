@@ -1,0 +1,52 @@
+.j-antivirus {display:block;}
+
+.jive-attachments .j-antivirus strong {
+	display:block;
+}
+
+.jive-wiki-body-download .j-antivirus {
+	margin-left: 38px;
+}
+
+.j-antivirus-scanning div strong {
+	background: transparent url(/images/jive-icon-working-16x16.gif) no-repeat left;
+	color: #999;
+	display: block;
+	float: left;
+	font-size: 1em;
+	padding: 0 0 0 22px;
+}
+
+div#j-action-queue div.antivirus-violation-found span.jive-icon-warn {
+	position: absolute;
+	left: 22px;
+	top: 16px;
+}
+
+table.jive-edit-antivirus {
+	margin-top: 10px;
+}
+
+table.jive-edit-antivirus td {
+	padding: 10px;
+	vertical-align: top;
+}
+
+table.jive-edit-antivirus td.jive-antivirus-label {
+	width: 180px!important;
+	font-weight: bold;
+	text-align: right;
+}
+
+table.jive-edit-antivirus label>.required {
+	font-weight: normal;
+	color: #ab1e18;
+}
+
+table.jive-edit-antivirus td.jive-antivirus-edit-desc {
+	width: 200px;
+}
+
+span.antivirus-success-message, span.antivirus-error-message {
+	display:none;
+}
