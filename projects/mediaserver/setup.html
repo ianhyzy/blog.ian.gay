@@ -57,10 +57,10 @@
           <div>
             <h3>Required Components</h3>
             <ul>
-              <li>A x86-based computer running Ubuntu 14.04. If you will not need the HTPC capability (i.e, will not be plugging it into a TV), you're better off installing Ubuntu Server.
+              <li>A x86-based computer running Ubuntu 14.04 (or newer LTS version). If you will not need the HTPC capability (i.e you'll only be using it as a server, not a media player) you're better off installing Ubuntu Server. The instructions will be basically the same.
               <li>An VPN provider that supports OpenVPN, like Private Internet Access. It costs $3.33 a month if you pay once a year.</li>
             </ul>
-            <p>While any x86 CPU will work, Plex Home Theater uses very few CPU cycles becuase it doesn't usually need to transcode video. If you want to watch video on other platforms, make sure your CPU is powerful enough, especially if you want to use a Chromecast or the Plex Web client. Both of these streaming methods will require transcoding most of the time. Other platforms may occasionally require transcoding, but nowhere near as often.</p>
+            <p>While any x86 CPU will work, Plex Home Theater uses very few CPU cycles becuase it doesn't usually need to transcode video. If you want to watch video on other platforms, make sure your CPU is powerful enough, especially if you want to use a Chromecast or the Plex Web client. Both of these streaming methods will require transcoding most of the time. Other platforms may also require transcoding depending on video type.</p>
           </div>
           <div>
 
@@ -83,7 +83,7 @@ none            100M   40K  100M   1% /run/user
             <pre>sudo mkdir /mnt/storage</pre>
             <p>Next, add the drive to your fstab. Fstab is your FileSystemTABle.</p>
             <pre>/dev/sda1 /mnt/storage  ext4    defaults        0       2</pre>
-            <p>Just change the paths, and add this into the next blank line of your fstab. You'll need to do a bit of searching if you want to use an NTFS-formatted drive, it's not reccomended, but still possible.</p>
+            <p>Just change the paths, and add this into the next blank line of your fstab. You'll need to do a bit of searching if you want to use an NTFS-formatted drive; it's not reccomended, but still possible.</p>
 
             <!-- Part 1: Setting up the VM -->
             <h1 id="part1">Creating a Virtual Machine from within Ubuntu Server</h1>
