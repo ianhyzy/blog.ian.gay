@@ -22,6 +22,7 @@
     <script>
       $(document).ready(function(){
         $('#dummy').load('/navbar.html');
+        $('#code').load('./code.txt');
       });               
     </script>
     <title>ianhyzy.me</title>
@@ -52,7 +53,7 @@
       <div class="row">
         <div class="col-med-4">
           <p>The code takes the gamepad buttons and turns them into the proper serial commands.</p>
-          <?php include($_SERVER['DOCUMENT_ROOT'].'/projects/roomba/code.txt') ?>
+          <p id="code"></p>
         </div>
       </div>
     </div>
