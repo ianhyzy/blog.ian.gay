@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/jpg" href="/img/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Cosmo theme -->
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/css/mine.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('#dummy').load('/navbar.html');
-      });               
-    </script>
-    <title>ianhyzy.me</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/jpg" href="./img/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Cosmo theme -->
+  <link href="./css/bootstrap-theme.css" rel="stylesheet">
+  <link href="./css/mine.css" rel="stylesheet">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#dummy').load('./navbar.html');
+    });
+  </script>
+  <title>ianhyzy.me</title>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navbar -->
-    <nav id="dummy"></nav>
+<!-- Navbar -->
+<nav id="dummy"></nav>
 
-    <div class="col-md-2"><!--
+<div class="col-md-2"><!--
 <a href="http://youtu.be/dQw4w9WgXcQ" target="_blank"><img class="side-img pad-top" src="/img/projects/cabbage/ad_1.jpg" /></a>-->
-    </div> 
-    <div class="col-md-6">
-      <div class="center">
-        <h1>Essential AutoHotkey Scripts for Windows</h1>
-        <br>
-        <h3>Send Media Commands</h3>
-        <p>I modified <a href="http://superuser.com/a/279000/257211">this Super User answer</a> to make a script that contols media keys. The only difference is I chnaged the Ctrl+alt+. command to show a dialog listing all the available commands.</p>
-        <h3>Switch Audio Output</h3>
-        <p>This script will allow to quickly switch audio outputs. You'll be able to press a key and switch from your speakers to your headphones, or vice versa. You'll need to edit the script with the location of the audio object in the Windows list (i.e. your headphones are #3, your speakers are #6), and Scroll Lock is the default key. Pressing it will cycle through audio outs.</p>
-        <h3>Running on startup</h3>
-        <p>You'll probably want these to run when you start your computer. go to your startup folder (the fastest way is to paste this is the navigation bar in explorer and hit "enter")</p>
-        <p>Your Account: C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p>
-        <p>All Users: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
-<<<<<<< HEAD:projects/ahk/ahk.html
-        </p>
+</div>
+<div class="col-md-6">
+  <div class="center">
+    <h1>Essential AutoHotkey Scripts for Windows</h1>
+    <br>
 
-=======
-</p>
->>>>>>> origin/master:projects/ahk/ahk.php
-      </div>
-    </div>
-    <div class="col-md-4 pad-top">
-      <h5>Send Media Commands</h5>
+    <h3>Send Media Commands</h3>
+
+    <p>I modified <a href="http://superuser.com/a/279000/257211">this Super User answer</a> to make a script that
+      contols media keys. The only difference is I chnaged the Ctrl+alt+. command to show a dialog listing all the
+      available commands.</p>
+
+    <h3>Switch Audio Output</h3>
+
+    <p>This script will allow to quickly switch audio outputs. You'll be able to press a key and switch from your
+      speakers to your headphones, or vice versa. You'll need to edit the script with the location of the audio object
+      in the Windows list (i.e. your headphones are #3, your speakers are #6), and Scroll Lock is the default key.
+      Pressing it will cycle through audio outs.</p>
+
+    <h3>Running on startup</h3>
+
+    <p>You'll probably want these to run when you start your computer. go to your startup folder (the fastest way is to
+      paste this is the navigation bar in explorer and hit "enter")</p>
+
+    <p>Your Account: C:\users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p>
+
+    <p>All Users: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
+      <<<<<<< HEAD:projects/ahk/ahk.html
+    </p>
+
+    =======
+    </p>
+    >>>>>>> origin/master:projects/ahk/ahk.php
+  </div>
+</div>
+<div class="col-md-4 pad-top">
+  <h5>Send Media Commands</h5>
       <pre>
 ^!Left::Send   {Media_Prev}
 ^!Down::Send   {Media_Play_Pause}
@@ -70,7 +84,7 @@
 MsgBox, 0, , Playback Controls:`n`Ctrl+Alt+LeftArrow sends Previous`n`Ctrl+Alt+DownArrow sends Play/Pause`n`Ctrl+Alt+RightArrow sends Next`n` `n`Volume Controls (Shift):`n`Ctrl+Shift+Alt+LeftArrow sends Volume Down`n`Ctrl+Shift+Alt+DownArrow sends Mute`n`Ctrl+Shift+Alt+RightArrow sends Volume Up
 return
       </pre>
-      <h5>Switch Audio Output</h5>
+  <h5>Switch Audio Output</h5>
       <pre>
 ScrollLock:: 
   toggle:=!toggle ;toggles up and down states. 
@@ -84,9 +98,9 @@ ScrollLock::
   ControlClick,OK 
 return
       </pre>
-    </div>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/scroll.js"></script>
-  </body>
+</div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/scroll.js"></script>
+</body>
 </html>
