@@ -4,30 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/jpg" href="/img/favicon.png">
+    <link rel="icon" type="image/jpg" href="./img/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Cosmo theme -->
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/css/mine.css" rel="stylesheet">
+    <link href="../../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../../css/mine.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function () {
         $('#dummy').load('/navbar.html');
-      });               
+        $('body').fadeIn(300).removeClass('hidden');
+      });
     </script>
     <title>ianhyzy.me</title>
   </head>
 
-  <body>
+  <body class="hidden">
 
     <!-- Navbar -->
     <nav id="dummy"></nav>
@@ -312,28 +312,28 @@ sudo update-rc.d deluge-daemon defaults
             <h1 id="part7">Other Useful Tools</h1>
 
             <p>Once in a great while, the way a TV show is named causes Plex to match it correctly, or not recognize it at all. If choosing the "Fix Incorrect Match" option in the Plex WebUI doesn't work, use <a href="http://www.bulkrenameutility.co.uk/Download.php">Bulk Rename Utility</a> to name the files in a way Plex can understand ('NameOfShow s00e00' works most of the time). After rename you will need to force a refresh for Plex to recognize the files have chnaged.</p>
-          <p>The Unsupported App Store also has the trakt.tv plugin, which allows you to keep a log of everything you've ever watched. It syncs both ways with Plex, and supports Plex Home (multi-user)!</p>
+            <p>The Unsupported App Store also has the trakt.tv plugin, which allows you to keep a log of everything you've ever watched. It syncs both ways with Plex, and supports Plex Home (multi-user)!</p>
 
-          <h1 id="part8">Conclusion</h1>
-          <p>This is it! You now have a secure torrent server you can download torrents with, all with your school's super fast internet! You should also be able to easily add movies and make sure your favorite TV shows get the latest episodes automatically downloaded.</p>
-          <p>Bookmark the following links so you don't need to remember a bunch of ports:</p>
-          <ul>
-            <li>yourip:5050 - CouchPotato</li>
-            <li>yourip:8112 - Deluge Web UI</li>
-            <li>yourip:32400/manage/index.html - Plex</li>
-          </ul>
+            <h1 id="part8">Conclusion</h1>
+            <p>This is it! You now have a secure torrent server you can download torrents with, all with your school's super fast internet! You should also be able to easily add movies and make sure your favorite TV shows get the latest episodes automatically downloaded.</p>
+            <p>Bookmark the following links so you don't need to remember a bunch of ports:</p>
+            <ul>
+              <li>yourip:5050 - CouchPotato</li>
+              <li>yourip:8112 - Deluge Web UI</li>
+              <li>yourip:32400/manage/index.html - Plex</li>
+            </ul>
 
-          <h3>Questions? Comments? Insults?</h3>
-          <p>If you see something really wrong here (and I'm sure there is), email me at <a href="mailto:ian@ianhyzy.tk">ian@ianhyzy.tk</a></p>
-        </div>
-      </div> 
+            <h3>Questions? Comments? Insults?</h3>
+            <p>If you see something really wrong here (and I'm sure there is), email me at <a href="mailto:ian@ianhyzy.tk">ian@ianhyzy.tk</a></p>
+          </div>
+        </div> 
+      </div>
     </div>
-    </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/sidebar.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/scroll.js"></script>
 
   </body>
 </html>

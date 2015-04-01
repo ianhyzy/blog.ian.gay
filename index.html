@@ -23,6 +23,7 @@
   <script>
     $(document).ready(function () {
       $('#dummy').load('./navbar.html');
+      $('#dummy').fadeIn(300).removeClass('hidden');
     });
   </script>
   <title>ianhyzy.me</title>
@@ -31,14 +32,14 @@
 <body>
 
 <!-- Navbar -->
-<nav id="dummy"></nav>
+<nav id="dummy"  class="hidden"></nav>
 <div class="jumbotron center">
   <h1>A vacuum with drive.</h1>
 
   <p>Turn your old roomba into a driving machine.</p>
   <img src="./img/projects/roomba/roomba.jpg" class="featured_img"/>
 
-  <p><a class="btn btn-success btn-lg" href="/projects/roomba/roomba.php" role="button">Check it out</a></p>
+  <p><a class="btn btn-success btn-lg" href="/projects/roomba/roomba.html" role="button">Check it out</a></p>
 </div>
 <p id="butt"></p>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

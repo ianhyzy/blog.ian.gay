@@ -9,10 +9,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Cosmo theme -->
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="/css/mine.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/mine.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,17 +20,19 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
     <script>
-      $(document).ready(function(){
+      $(document).ready(function () {
         $('#dummy').load('/navbar.html');
-      });               
+        $('body').fadeIn(300).removeClass('hidden');
+      });
     </script>
     <title>ianhyzy.me</title>
   </head>
 
-  <body>
+  <body class="hidden">
 
     <!-- Navbar -->
     <nav id="dummy"></nav>
+
     <div class="row">
       <div class="col-lg-12 content">
         <h1 title="TWO FOUR SIX OH ONE!">Who am I?</h1>
@@ -43,8 +45,8 @@
       </div>
     </div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/scroll.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scroll.js"></script>
   </body>
 
 </html>

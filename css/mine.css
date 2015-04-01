@@ -146,7 +146,9 @@ body {
 .navbar {
   margin-bottom: 0px;
 }
-
+.hidden {
+  visibility: hidden;
+}
 /* sidebar shit */
 
 .navbar-form input, .form-inline input {

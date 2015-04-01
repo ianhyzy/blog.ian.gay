@@ -21,14 +21,15 @@
 <![endif]-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
-      $(document).ready(function(){
+      $(document).ready(function () {
         $('#dummy').load('/navbar.html');
-      });               
+        $('body').fadeIn(300).removeClass('hidden');
+      });
     </script>
     <title>ianhyzy.me</title>
   </head>
 
-  <body>
+  <body class="hidden">
 
     <!-- Navbar -->
     <nav id="dummy"></nav>
