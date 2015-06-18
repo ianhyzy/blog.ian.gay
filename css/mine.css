@@ -73,7 +73,6 @@ body {
 }
 .jumbotron:after {
   content: "";
-  background: url("/img/art/");
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -149,6 +148,13 @@ body {
 .hidden {
   visibility: hidden;
 }
+<<<<<<< HEAD
+=======
+#dummy {
+  height: 50px;
+  /* This is a placeholder that just makes sure the body content doesn't shift when the real nav loads */
+}
+>>>>>>> origin/master
 
 /* sidebar shit */
 
