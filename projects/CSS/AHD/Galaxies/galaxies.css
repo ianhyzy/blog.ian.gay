@@ -9,6 +9,31 @@
 		format(woff);
 }
 
+/* 
+Added by TheDankEngine 
+*/
+
+.unread {
+	background: url(./images/unread.gif) no-repeat center center;
+}
+.read {
+	background: url(./images/read.gif) no-repeat center center;
+}
+#last5 {
+	max-width: 150px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+.cats_movies {
+	background: url(./images/movies2.png) no-repeat center center;
+	width: 50px;
+	height: 50px;
+}
+.show_torrents {
+	background: url(./images/what_show.gif) no-repeat center center;
+}
+
 body {
 	height:100%;
 	background-attachment: fixed;
@@ -635,6 +660,8 @@ table.forum_post .colhead_dark td {
 	text-shadow: 1px 1px 6px #000, -1px -1px 6px #000;
 }
 
+
+
 .forum_post strong.bbcode_quote, .forum_post blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > strong.bbcode_quote, .forum_post blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > blockquote > strong.bbcode_quote {
 	color:#8dfec0 !important;
 }
@@ -745,6 +772,8 @@ table.forum_post .colhead_dark td {
 	text-transform: uppercase;
 	color:#8dfec0 !important;
 }
+
+
 
 .edition_info,tr {
 	background-color:#111;
