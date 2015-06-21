@@ -148,13 +148,11 @@ body {
 .hidden {
   visibility: hidden;
 }
-<<<<<<< HEAD
-=======
+
 #dummy {
   height: 50px;
   /* This is a placeholder that just makes sure the body content doesn't shift when the real nav loads */
 }
->>>>>>> origin/master
 
 /* sidebar shit */
 
