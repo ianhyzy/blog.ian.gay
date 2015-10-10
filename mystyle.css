@@ -8,8 +8,19 @@
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url('./assets/demos/welcome_card.jpg') center / cover;
+  background: url('./images/cfk-new.JPG') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
+}
+.mdl-mini-footer {
+  padding: 15px 15px;
+}
+
+@media (min-width: 1366px) and (max-resolution: 1.5dppx) {
+  .page-content  {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1.3%;
+  }
 }
