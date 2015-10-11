@@ -21,7 +21,22 @@
   border-radius: 3px;
   padding: 0.3em;
 }
-
+.fullcard {
+  width: 100%;
+}
+.fullcard_title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32px;
+  margin-bottom: -20px;
+}
+hr {
+  height: 1px;
+  background-color: grey;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* built in classes */
 .demo-card-wide.mdl-card {
@@ -43,15 +58,17 @@
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
-
+}
+.nolinkstyle {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* media queries */
-
 @media (min-width: 1366px) and (max-resolution: 1.5dppx) {
   .page-content  {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 1.3%;
   }
 }
