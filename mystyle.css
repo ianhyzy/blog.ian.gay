@@ -2,13 +2,26 @@
   max-width:100%;
   max-height:100%;
 }
+.demo-card-wide > .germany-card {
+  background: url('./images/germany.JPG') center / cover;
+}
+.demo-card-wide > .cfk-card {
+  background: url('./images/cfk-new.JPG') center / cover;
+}
+.highlight {
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 3px;
+  padding: 0.3em;
+}
+
+
+/* built in classes */
 .demo-card-wide.mdl-card {
   width: 512px;
 }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url('./images/cfk-new.JPG') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
@@ -25,6 +38,8 @@
   background:
     url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
 }
+
+/* media queries */
 
 @media (min-width: 1366px) and (max-resolution: 1.5dppx) {
   .page-content  {
