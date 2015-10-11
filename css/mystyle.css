@@ -3,10 +3,18 @@
   max-height:100%;
 }
 .demo-card-wide > .germany-card {
-  background: url('./images/germany.JPG') center / cover;
+  background: url('../images/germany.JPG') center / cover;
 }
 .demo-card-wide > .cfk-card {
-  background: url('./images/cfk-new.JPG') center / cover;
+  background: url('../images/cfk-new.JPG') center / cover;
+}
+.demo-card-square > .about-me {
+  background:
+    url('../images/pbl.JPG') center / cover;
+}
+.demo-card-square > .projects {
+  background:
+    url('../images/roomba.jpg') center / cover;
 }
 .highlight {
   background-color: rgba(0,0,0,0.6);
@@ -35,8 +43,7 @@
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+
 }
 
 /* media queries */
