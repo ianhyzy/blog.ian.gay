@@ -19,6 +19,9 @@
 .demo-card-wide > .cfk-card {
   background: url('../images/cfk-new.JPG') center / cover;
 }
+.demo-card-wide > .thissite {
+  background: url('../images/thissite.jpg') center / cover;
+}
 .demo-card-square > .about-me {
   background:
     url('../images/pbl.JPG') center / cover;
