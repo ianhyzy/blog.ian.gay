@@ -11,7 +11,7 @@
 .left_img {
   max-width: 200px;
   float: left;
-  padding-right: 1em;
+  padding-right: 3em;
 }
 .demo-card-wide > .germany-card {
   background: url('../images/germany.JPG') center / cover;
