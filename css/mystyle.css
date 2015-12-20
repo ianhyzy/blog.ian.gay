@@ -15,7 +15,6 @@ hr {
 }
 
 /* Built-in classes */
-
 .demo-card-wide > .germany-card {
   background: url('../images/germany.JPG') center / cover;
 }
@@ -32,6 +31,23 @@ hr {
 .demo-card-square > .projects {
   background:
     url('../images/roomba.jpg') center / cover;
+}
+/* photo card clases */
+.demo-card-wide > .mw-card {
+  background: url('../images/mw-cover.jpg') center / cover;
+}
+.demo-card-wide > .trvmde-card {
+  background: url('../images/germany.JPG') center / cover;
+}
+.demo-card-wide > .stmarys-card {
+  background: url('../images/stmarys.jpg') center / cover;
+}
+.demo-card-wide > .hamburg-card {
+  background: url('../images/hamburg.jpg') center / cover;
+}
+.mdl-card__supporting-text {
+  color: rgb(83, 83, 83);
+  min-height: 36px;
 }
 
 /* new classes */
