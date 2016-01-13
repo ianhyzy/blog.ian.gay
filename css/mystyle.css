@@ -45,6 +45,9 @@ hr {
 .demo-card-wide > .hamburg-card {
   background: url('../images/hamburg.jpg') center / cover;
 }
+.demo-card-wide > .berlin-card {
+  background: url('../images/berlin-cover.jpg') center / cover;
+}
 .mdl-card__supporting-text {
   color: rgb(83, 83, 83);
   min-height: 36px;

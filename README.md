@@ -1,3 +1,3 @@
 ianhyzy.me
 ==========
-Uses Google's Material Design Lite. Made with Atom.
+Uses Google's Material Design Lite.
