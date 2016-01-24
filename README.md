@@ -8,5 +8,4 @@ The site uses the following tools/libraries:
 * jQuery
 * [jQuery Modal Dialog Plugin For Material Design Lite](http://www.jqueryscript.net/lightbox/jQuery-Modal-Dialog-Plugin-For-Material-Design-Lite.html)
 
-I love the look of Material Design, and MDL is a very easy framework to work with.
-It's bare-bones compared to frameworks, but for my purposes for this site that's fine.
+I love the look of Material Design, and MDL is a very small, easy framework to work with.
