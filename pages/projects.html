@@ -31,6 +31,9 @@ If it wasn't, I feel like that would be pretty worrying.
   <link rel="icon" href="../favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-red.min.css" />
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <link rel="stylesheet" href="css/mdl-jquery-modal-dialog.css">
+  <script src="js/mdl-jquery-modal-dialog.js"></script>
+  <script stc="js/modal.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="../css/mystyle.css">
   <style>
@@ -128,8 +131,19 @@ If it wasn't, I feel like that would be pretty worrying.
     </footer>
   </div>
   <script src="js/material.min.js"></script>
-  <scirpt src="js/secret.js">
-    </script>
+  <script>
+    // I am aware this is kind of a nightmare
+      $('#cfk-button').click(function () {
+        showDialog({
+            title: 'One small issue...',
+            text: 'Camp for Kids isn\'t ready for thier new site yet, and to \
+            save money in the meantime, the development server was taken offline. \
+            Look out for the update in the coming weeks. You can see a preview \
+            screenshot <a href="images/cfk-new.JPG" target="_blank"><b>here</b></a>. \
+            If you have any more questions about the project, feel free to contace me.'
+        })
+      });
+  </script>
 </body>
 
 </html>
