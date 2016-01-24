@@ -31,9 +31,10 @@ If it wasn't, I feel like that would be pretty worrying.
   <link rel="icon" href="../favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.blue-red.min.css" />
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-  <link rel="stylesheet" href="css/mdl-jquery-modal-dialog.css">
-  <script src="js/mdl-jquery-modal-dialog.js"></script>
-  <script stc="js/modal.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <link rel="stylesheet" href="../css/mdl-jquery-modal-dialog.css">
+  <script src="../js/mdl-jquery-modal-dialog.js"></script>
+  <script stc="../js/modal.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="../css/mystyle.css">
   <style>
@@ -49,7 +50,7 @@ If it wasn't, I feel like that would be pretty worrying.
   </style>
 </head>
 
-<body class="mdl-base" onload="press();">
+<body class="mdl-base">
   <!-- Always shows a header, even in smaller screens. -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
@@ -85,9 +86,9 @@ If it wasn't, I feel like that would be pretty worrying.
               so the new staff could easily make changes and add new content and photos.
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="http://45.55.75.192/" target="_blank">
+              <button id="cfk-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 view live site
-              </a>
+                </a>
             </div>
           </div>
           <div class="mdl-cell mdl-cell--3-col">
