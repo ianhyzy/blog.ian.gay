@@ -12,6 +12,7 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
+  margin: 3rem;
 }
 
 .parallax-container {
@@ -70,6 +71,7 @@ footer.page-footer {
 }
 .card-content {
   min-height: 200px;
+  max-height: 100%;
 }
 .wide {
   width: 100%;
