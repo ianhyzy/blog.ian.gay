@@ -14,7 +14,9 @@ p {
   line-height: 2rem;
   margin: 3rem;
 }
-
+.breathe {
+  padding-top: 1em;
+}
 .parallax-container {
   min-height: 380px;
   line-height: 0;
