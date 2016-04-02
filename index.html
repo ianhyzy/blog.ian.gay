@@ -21,6 +21,7 @@
   ga('send', 'pageview');
 
 </script>
+
 <body>
   <nav class="blue" role="navigation">
     <div class="nav-wrapper container">
@@ -77,19 +78,35 @@
             <div class="card medium hoverable">
               <div class="card-image">
                 <img src="./images/thissite.png">
-                <span class="card-title shadow"><div class="viewable">View Source</div></span>
+                <span class="card-title shadow"><div class="viewable">Camp for Kids Redesign</div></span>
               </div>
               <div class="card-content">
-                <p>The complete source of this site is available on GitHub along with technical information.</p>
+                <p>I redesigned Milwaukee's Camps for Kids website to make it look great on all devices and easy for staff to
+                  make changes to.</p>
               </div>
               <div class="card-action">
-                <a href="https://github.com/ianhyzy/ianhyzy.me">View source</a>
+                <a href="http://campsforkidsmke.org/">View Site</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">More info</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
+
+    </div>
+  </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>About the Redesign</h4>
+      <p>I started the redesign with a partner in October 2015.
+        We used Wordpress becuase the client wanted to be able toeasily update and edit the site in the future.
+        They gave us the copy and images, and a few things they wanted for sure (footer with logo, hit counter).
+        I found an excellent theme to start with and had the first prototype done in a few days. The new site works great on screens
+        of a sizes and shapes and it's easier than ever for parents to find camps that are right for their kids.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">close window</a>
     </div>
   </div>
 
@@ -97,7 +114,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
+  <script>
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+  </script>
 </body>
 
 </html>
