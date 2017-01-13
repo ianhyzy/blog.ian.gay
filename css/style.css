@@ -9,7 +9,6 @@ nav ul a,
 nav .brand-logo {
   color: #FFF;
 }
-
 p {
   line-height: 2rem;
   margin: 3rem;
@@ -23,10 +22,15 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
-
+.parallax-container .section {
+  width: 100%;
+}
+.link {
+  color: #039be5;
+}
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -69,7 +73,7 @@ footer.page-footer {
   min-height: 300px;
 }
 .shadow {
-  text-shadow: 1px 1px 2px #696969;
+  text-shadow: 4px 2px 4px #696969;
 }
 .card-content {
   min-height: 200px;
