@@ -95,7 +95,7 @@
               <div class="card-action">
                 <a href="https://github.com/ianhyzy/ianhyzy.me" target="_blank">View GitHub</a>
                 <!-- TODO: fix url -->
-                <a class="waves-effect waves-light" href="#modal1">CFK redesign</a>
+                <a class="waves-effect waves-light btn" href="#modal1">CFK redesign</a>
               </div>
             </div>
           </div>
@@ -105,8 +105,19 @@
   </div>
   </div>
 
-  <!-- modals go down here, main page content is done -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
 
+
+  <!-- modals go down here, main page content is done -->
+  <!--
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>About the Redesign</h4>
@@ -117,18 +128,12 @@
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green">close window</a>
     </div>
-  </div>
+  </div> -->
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
   <script src="../js/init.js"></script>
-  <script>
-    $(document).ready(function() {
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-      $('.modal-trigger').leanModal();
-    });
-  </script>
 </body>
 
 </html>
