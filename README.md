@@ -1,8 +1,8 @@
 ianhyzy.me
 ==========
-My personal website. It's hosted on a Hetzner dedicated server and proteced by CloudFlare.
-
-It should update from the GitHub repo automatically every 15 minutes.
+My personal website. I use GitHub's free Pages for hosting and CloudFlare's free protection for SSL and anti-DDoS. I purchased the domain with domains.google.
 
 I used [Materialize.css](http://materializecss.com/) as a base when building the site.
-Every image used on the site is shrunk to ~1000px and compressed to around ~200KB or less for quick load times.
+Images are compressed with external tools to get the files size down as much as possible without losing quality.
+
+I used Atom as my primary editor due to the theme choices, extensive built-in plugin database, and panel design.
