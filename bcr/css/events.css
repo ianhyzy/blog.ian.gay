@@ -1,0 +1,105 @@
+.events-bg-color {
+    background-color: white;
+}
+
+.events-container{
+  padding-top: 25px;
+}
+
+.events-bg-img {
+    background-image: url("../img/woodenbg_c.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.events-modal-button {
+    border-radius: .5em;
+}
+
+.events-modal-container {
+    width: 500px;
+}
+
+.events-item-padding {
+    padding: 2em;
+    padding-bottom: 1em;
+
+}
+
+.fc-button{
+  background-color: var(--lg-bttn-color) !important;
+  color: var(--lg-bttn-txt-color) !important;
+
+}
+
+.fc-state-default{
+  background-image: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  boarder: 0px solid !important;
+  boarder-color: none !important;
+  height: 50px !important;
+  text-decoration: none;
+  letter-spacing: .5px;
+  padding: 0 1rem !important;
+  text-transform: uppercase;
+}
+
+.fc-state-default:hover{
+  background-color: var(--lg-bttn-hover-color) !important;
+}
+
+.fc-state-active{
+  background-color: var(--lg-bttn-hover-color) !important;
+}
+
+button:focus {
+  background-color: white;
+}
+
+#externalTitle{
+  text-align: center;
+  font-size: 2.5em;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* Styling for mobile devices */
+@media (max-width: 33em )
+{
+
+  .events-item-padding {
+      padding: 1.3em;
+  }
+
+  #externalTitle{
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  .event-container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .events-modal-container {
+      width: 100%;
+  }
+
+  .fc-month-button {
+      display: none;
+  }
+
+  .fc-listWeek-button {
+    display: none;
+  }
+
+  .fc-left {
+    position: relative;
+    right: -29%;
+  }
+}

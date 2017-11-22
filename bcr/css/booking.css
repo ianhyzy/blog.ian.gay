@@ -1,0 +1,4 @@
+.parsley-length, .parsley-type, .parsley-required, .parsley-lengthOf{
+  text-align: center;
+  color: red !important;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BCR - Event</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper menu">
+      <a href="../index.html" class="brand-logo center">Brew City Resort</a>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li class="active"><a href="events.html">Events</a></li>
+      </ul>
+      <ul id="slide-out" class="side-nav">
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="../img/cheese_c.jpg">
+            </div>
+            <a href="../index.html"><span class="white-text name">Brew City Resort</span></a>
+          </div>
+        </li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li class="active"><a href="events.html">Events</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer events-modal-container">
+    <div class="modal-content">
+      <h4 class="eventTitle"></h4>
+      <div class="divider"></div>
+      <div class="events-container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h6>Start Time</h6>
+            <p class="startTime">
+            </p>
+          </div>
+          <div class="col l6 s12">
+            <h6>End Time</h6>
+            <p class="endTime">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="events-container">
+        <div class="row">
+          <div class="col l12 s12">
+            <h5>Event Details</h5>
+            <p class="description"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l12 s12">
+            <h5>Event Location</h5>
+            <p class="location">N/A</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a onclick="$('#modal1').modal('close');" class="modal-action modal-close waves-effect waves-green btn-flat events-modal-button">Close</a>
+    </div>
+  </div>
+
+  <div class="events-bg-img">
+    <div class="event-container container ">
+      <div class="event-container container events-bg-color z-depth-1">
+        <div class="section events-item-padding center">
+          <h4>Plan your dream vacation</h4>
+          <p>Check and see what great events are taking place in Milwaukee and at the Brew City Resort during
+            your stay.</p>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <div class="event-container container events-item-padding z-depth-1 events-bg-color">
+        <p id="externalTitle"></p>
+        <div id='calendar'></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer custom-footer">
+    <div class="container">
+      <div class="row">
+        <!-- this website uses a 12 column grid system with 3 breakpoints for views-->
+        <!-- 'l6' means the content in the div will take up half the screen on 'large' screens. the 's12' denotes it will fill the container width (12 columns) on 'small' screens.-->
+        <div class="col l6 s12">
+          <h5 class="white-text">Brew City Resort, Inc.</h5>
+          <p class="grey-text text-lighten-4">Feel free to use our contact form to send us any inquiries. Brew City Resort values the wellbeing
+            of all of our guests equally and to the highest extent possible.</p>
+          <h5 class="white-text">Visit us on social media:</h5>
+          <a href="https://www.facebook.com/Brew-City-Resort-1839562069617411/" class="social" target="_blank"><i class="fa fa-facebook-official fa-2x white-text" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/BrewCityResort" class="social" target="_blank"><i class="fa fa-twitter fa-2x white-text" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/brewcityresort/?hl=en" class="social" target="_blank"><i class="fa fa-instagram fa-2x white-text" aria-hidden="true"></i></a>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="booking.html">Book a Room</a></li>
+            <li><a class="grey-text text-lighten-3" href="menu.html">Brew City Bistro Menu</a></li>
+            <li><a class="grey-text text-lighten-3" href="amenities.html">Amenities</a></li>
+            <li><a class="grey-text text-lighten-3" href="copyright.html">Copyright Info</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <i>© 2017 Erin Heinz, Michael LeRoy, Ian Hyzy</i>
+      </div>
+    </div>
+  </footer>
+    <!--SCRIPTS-->
+    <script src='../js/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <link href="../css/events.css" rel="stylesheet"/>
+
+    <!--fullCalendar references -->
+    <link href='../css/fullcalendar.min.css' rel='stylesheet' />
+    <script src='../js/moment.min.js'></script>
+    <script src='../js/fullcalendar.js'></script>
+    <script type='text/javascript' src='../js/gcal.js'></script>
+    <script type="text/javascript" src="../js/calendar.js"></script>
+    <script>
+      $(document).ready(function(){
+        initalizeCalendar();
+      });
+    </script>
+
+</body>
+
+</html>
