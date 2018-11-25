@@ -1,7 +1,7 @@
 ianhyzy.me
 ==========
 ## Hosting Info
-This is my personal website, which should hopefully show off my talent to potential employers. I use GitHub's free Pages service for hosting and CloudFlare's free protection for SSL. I purchased the domain with Google Domains.
+This is my personal website, which should hopefully show off my talent to potential employers. I use GitHub's free Pages service for hosting which includes SSL. I purchased the domain with Google Domains.
 
 ## Tools Used
 * [Materialize.css](http://materializecss.com/): a responsive CSS framework based on Google's Material Design
