@@ -9,7 +9,7 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!--Import my own css-->
   <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
@@ -33,23 +33,23 @@
 <body>
   <nav class="blue" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="../index.html" class="brand-logo">Ian Hyzy</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li class="active"><a href="pages/aboutme.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
+      <a href="#" class="brand-logo">Ian Hyzy</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="../index.html"><i class="left material-icons">home</i>Home</a></li>
+        <li><a href="aboutme.html"><i class="left material-icons">person</i>About Me</a></li>
+        <li class="active"><a href="portfolio.html"><i class="left material-icons">view_carousel</i>Portfolio</a></li>
+        <li><a href="blog.html"><i class="left material-icons">speaker_notes</i>Blog</a></li>
       </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-        <li class="active"><a href="pages/aboutme.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="../index.html"><i class="left material-icons">home</i>Home</a></li>
+    <li><a href="aboutme.html"><i class="left material-icons">person</i>About Me</a></li>
+    <li class="active"><a href="portfolio.html"><i class="left material-icons">view_carousel</i>Portfolio</a></li>
+    <li><a href="blog.html"><i class="left material-icons">speaker_notes</i>Blog</a></li>
+  </ul>
 
   <div class="container">
     <div class="section">
@@ -182,15 +182,26 @@
   </div>
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <script src="../js/init.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     $(document).ready(function() {
       // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
       $('.modal').modal();
     });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
   </script>
 </body>
 

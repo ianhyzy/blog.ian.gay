@@ -80,7 +80,7 @@ footer.page-footer {
   text-shadow: 3px 1px 1px #696969;
 }
 .card-content {
-  min-height: 200px;
+  min-height: 100px;
   max-height: 100%;
 }
 
@@ -95,6 +95,7 @@ footer.page-footer {
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
   color: #039be5;
+  font-weight: bolder;
 }
 .inner-card-expand-w{
   padding-left: -2em;
