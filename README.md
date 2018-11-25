@@ -10,4 +10,4 @@ This is my personal website, which should hopefully show off my talent to potent
 ##Other
 * Images are compressed with external tools to get the files size down as much as possible without losing quality for most screens.
 * The site uses the MIT license so on the remote chance someone else actually wants to use this for something they can.
-* Google Analytics is used for tracking people who don't have an adblocker installed for some reason
+* Google Analytics is used for tracking people who don't have an adblocker installed
