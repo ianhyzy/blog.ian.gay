@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+  />
+  <title>Home Assistant Setup | Blog | Ian Hyzy</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-64244355-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<body>
+  <nav class="blue" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">Ian Hyzy</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/index.html"><i class="left material-icons">home</i>Home</a></li>
+        <li><a href="/pages/aboutme.html"><i class="left material-icons">person</i>About Me</a></li>
+        <li><a href="/pages/portfolio.html"><i class="left material-icons">view_carousel</i>Portfolio</a></li>
+        <li class="active"><a href="blog.html"><i class="left material-icons">speaker_notes</i>Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/index.html"><i class="left material-icons">home</i>Home</a></li>
+    <li><a href="/pages/aboutme.html"><i class="left material-icons">person</i>About Me</a></li>
+    <li><a href="/pages.portfolio.html"><i class="left material-icons">view_carousel</i>Portfolio</a></li>
+    <li class="active"><a href="blog.html"><i class="left material-icons">speaker_notes</i>Blog</a></li>
+  </ul>
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="valign-wrapper full-card">
+            <div class="card wide">
+              <div class="fullcard-text card-content">
+                <h3 class="grey-text text-darken-3">My Synology/Home Assistant Smart Home</h3>
+                <hr>
+                <div class="row">
+                  <div class="col s12 m12 l8">
+                    <h4>Intro</h4>
+                    <p class="blog-body">
+                      I've setup everything in my home to talk to everything else, which is no small feat when nobody has fully open APIs. I have my media center, lights, music, switches, and more controlled with Home Assistant. Sonarr and Radarr download & organize movies & TV shows for Plex to then stream to any device. I can press one button on my universal remote to dim the lights and turn on my TV and soundbar to the right input to start a movie, which is all I really wanted all along. This is what it takes to make that happen.
+                    </p>
+                    <h4>Parts List</h4>
+                    <p class="blog-body">Most guides for Home Assistant assume you're using a generic Linux box or a Raspberry Pi. While many things are the same between Synology's Linux and Debian-based distros like Ubuntu and Raspbian, there's some differences when using a Synology device.</p>
+                    <ul>
+                      <li>🖥Synology DS418play</li>
+                      <li><a href="https://smile.amazon.com/gp/product/B01GJ826F8/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1" target="_blank">🔎USBZB-1 USB Hub</a></li>
+                      <li><a href="https://smile.amazon.com/gp/product/B0197840KQ/ref=oh_aui_search_detailpage?ie=UTF8&psc=1" target="_blank">💡Sylvania RGBW Bulbs</a></li>
+                      <li><a href="https://smile.amazon.com/gp/product/B0196M620Y/ref=oh_aui_search_detailpage?ie=UTF8&psc=1" target="_blank">🔄Sylvania Switch</a></li>
+                    </ul>
+                    <h4>Step 0: Setting up Docker</h4>
+                    <p class="blog-body">While you will need to use the command line to setup Home Assistant in docker, I still use the docker package that's available to easily manage my six other docker installs, which do not need the command line options to start. The Docker package doesn't support the <code>device</code> argument, which is used to allow the docker container to read the Zigbee/Z-Wave USB stick. It's easy to do, just follow <a href="https://tylermade.net/2017/09/28/how-to-install-docker-on-an-unsupported-synology-nas/" target="_blank"> this guide</a> to install the .spk.
+                    </p>
+                    <h4>Installing Home Assistant</h4>
+                    
+                  </div>
+                  <div class="col s12 m12 l4 center">
+                    <img src="../images/me.jpg" width="250px" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  Scripts-->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  </script>
+
+</body>
+
+</html>

@@ -16,6 +16,12 @@ p {
 .breathe {
   padding-top: 1em;
 }
+
+.blog-body {
+  padding-top: .2em;
+  line-height: 150%;
+  font-size: 1.15em;
+}
 .parallax-container {
   min-height: 380px;
   line-height: 0;
@@ -100,4 +106,9 @@ footer.page-footer {
 .inner-card-expand-w{
   padding-left: -2em;
   padding-right: -2em;
+}
+
+code {
+  font-weight: bold;
+  color: #ff33cc;
 }
