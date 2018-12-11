@@ -93,6 +93,7 @@
                     <p class="blog-body">Now that Home Assistant is installed and running, we can work on configuring services for it to use.</p>
                     <p class="blog-body">I use the following services or devices:</p>
                     <ul>
+                      <li>Zigbee Devices</li>
                       <li>Logitech Harmony Hub & Remote</li>
                       <li>Google Assistant</li>
                       <li>Sylvania Smart Lights</li>
@@ -102,6 +103,15 @@
                       <li>Spotify</li>
                     </ul>
                     <p class="blog-body">I'll go through each and describe what I use it for and my configuration.</p>
+                    <h5>Zigbee Lights & Switches</h5>
+                    <p>Adding your Zigbee devices takes some special command-line wizardry. First, SSH into your Synology devices. Run <code>cat /dev/tty*</code>You should see  <code>/dev/ttyUSB0</code> and <code>/dev/ttyUSB1</code>. This mounts the USB devices inside the docker container. The below command assumes you downloaded the container names <code>home-assistant</code>. I keep my config files in the Synology folder <code>/volume1/Vault/configs/ha/config</code>. Make sure you keep the <code>:/config</code> - this maps the Synology directory to a mounted directory in the container. Then, run the command below:</p>
+                    <code>sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant</code>
+                    <p class="blog-body">This should create the docker container with everything it needs to run Home Assistant with Zigbee and Z-Wave devices.</p>
+                    <p>Zigbee should be <code>/tty/USB1</code>. To add it to Home Assistant, active the Zigbee componenet in your config. You'll need to specify a complete path to store the zigbee.db file - it will be automatically created but the directory it's in must exist.</p>
+<pre><code>zha:
+  usb_path: /dev/ttyUSB1
+  database_path: /config/zigbee.db</code></pre>
+                    <p>After doing this and possibly a reboot of Home Assistant, you should see the <code>zha.permit</code> and <code>zha.remove</code> under the "Services" todo: add icon menu. Put your lights into pairing mode, and then click <code>call service</code>. They should flash to confirm the pairing.</p>
                     <h5>Logitech Harmony</h5>
                     <p class="blog-body">You'll want to set up your Harmony Hub & Remote with all your devices and activities first.</p>
                     <p class="blog-body">After making sure everything works the way you like with the app, you can never wait for it to load again - it's easier and much faster to trigger Activities with Home Assistant.</p>
