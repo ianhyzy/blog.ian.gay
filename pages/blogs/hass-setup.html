@@ -72,6 +72,7 @@
                       <li><a href="https://smile.amazon.com/gp/product/B01GJ826F8/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1" target="_blank">🔎USBZB-1 USB Hub</a></li>
                       <li><a href="https://smile.amazon.com/gp/product/B0197840KQ/ref=oh_aui_search_detailpage?ie=UTF8&psc=1" target="_blank">💡Sylvania RGBW Bulbs</a></li>
                       <li><a href="https://smile.amazon.com/gp/product/B0196M620Y/ref=oh_aui_search_detailpage?ie=UTF8&psc=1" target="_blank">🔄Sylvania Switch</a></li>
+                      <li><a href="">📺Harmony Hub + Home Control remote</a></li>
                     </ul>
                     <h4>Step 0: Preparing your NAS and Docker</h4>
                     <p class="blog-body">While you will need to use the command line to setup Home Assistant in docker, I still use the docker package that's available to easily manage my six other docker installs, which do not need the command line options to start. The Docker package doesn't support the <code>device</code> argument, which is used to allow the docker container to read the Zigbee/Z-Wave USB stick. It's easy to do, just follow <a href="https://tylermade.net/2017/09/28/how-to-install-docker-on-an-unsupported-synology-nas/" target="_blank"> this guide</a> to install the .spk.
@@ -83,11 +84,11 @@
                     <p>The Z-Wave/Zigbee USB stick requires some third-party drivers to function properly. Find the right version here. It will require a reboot once it's installed.</p>
                     <p class="blog-body">todo: fill in link</p>
                     <h5>Step 1.2: Install the Home Assistant docker container</h5>
-                    <p class="blog-body">Docker "containers" are tiny operating systems built to run a specific program or set of programs. They're nice to use becuase they're easy to update and configure.</p>
-                    <p class="blog-body">When Docker is upgraded, all data in the container is lost. To make sure you don't lost any data, make a folder in a Synology library. You'll tell the Home Assistant container to store confiruation files in this folder. This will also make them much easier to edit.</p>
+                    <p class="blog-body">Docker "containers" are tiny operating systems built to run a specific program or set of programs. They're nice to use because they're easy to update and configure.</p>
+                    <p class="blog-body">When Docker is upgraded, all data in the container is lost. To make sure you don't lost any data, make a folder in a Synology library. You'll tell the Home Assistant container to store configuration files in this folder. This will also make them much easier to edit.</p>
                     <p class="blog-body">todo: fill in screenshots</p>
                     <h5>Step 1.3 (Optional): Install Home Assistant Configurator</h5>
-                    <p class="blog-body">You can edit your files with the Synology text editor, or mnount your file share on a PC and use your favorite text editing program. Another option is to use HASS Configurator, a web-based text editor than can load your config files. It also provides helpful links and verificaton that your files are formatted correctly.</p>
+                    <p class="blog-body">You can edit your files with the Synology text editor, or mount your file share on a PC and use your favorite text editing program. Another option is to use HASS Configurator, a web-based text editor than can load your config files. It also provides helpful links and verification that your files are formatted correctly.</p>
                     <p class="blog-body">To verify you've installed Home Assistant correctly, go to <code>http://your_Synology_IP:8123</code> and ensure you can see the Home Assistant welcome screen.</p>
                     <h4>Step 2: Configuring Home Assistant</h4>
                     <p class="blog-body">Now that Home Assistant is installed and running, we can work on configuring services for it to use.</p>
@@ -107,20 +108,20 @@
                     <p>Adding your Zigbee devices takes some special command-line wizardry. First, SSH into your Synology devices. Run <code>cat /dev/tty*</code>You should see  <code>/dev/ttyUSB0</code> and <code>/dev/ttyUSB1</code>. This mounts the USB devices inside the docker container. The below command assumes you downloaded the container names <code>home-assistant</code>. I keep my config files in the Synology folder <code>/volume1/Vault/configs/ha/config</code>. Make sure you keep the <code>:/config</code> - this maps the Synology directory to a mounted directory in the container. Then, run the command below:</p>
                     <code>sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant</code>
                     <p class="blog-body">This should create the docker container with everything it needs to run Home Assistant with Zigbee and Z-Wave devices.</p>
-                    <p>Zigbee should be <code>/tty/USB1</code>. To add it to Home Assistant, active the Zigbee componenet in your config. You'll need to specify a complete path to store the zigbee.db file - it will be automatically created but the directory it's in must exist.</p>
+                    <p class="blog-body">Zigbee should be <code>/tty/USB1</code>. To add it to Home Assistant, active the Zigbee component in your config. You'll need to specify a complete path to store the zigbee.db file - it will be automatically created but the directory it's in must exist.</p>
 <pre><code>zha:
   usb_path: /dev/ttyUSB1
   database_path: /config/zigbee.db</code></pre>
-                    <p>After doing this and possibly a reboot of Home Assistant, you should see the <code>zha.permit</code> and <code>zha.remove</code> under the "Services" todo: add icon menu. Put your lights into pairing mode, and then click <code>call service</code>. They should flash to confirm the pairing.</p>
+                    <p class="blog-body">After doing this and possibly a reboot of Home Assistant, you should see the <code>zha.permit</code> and <code>zha.remove</code> under the "Services" todo: add icon menu. Put your lights into pairing mode, and then click <code>call service</code>. They should flash to confirm the pairing.</p>
                     <h5>Logitech Harmony</h5>
                     <p class="blog-body">You'll want to set up your Harmony Hub & Remote with all your devices and activities first.</p>
                     <p class="blog-body">After making sure everything works the way you like with the app, you can never wait for it to load again - it's easier and much faster to trigger Activities with Home Assistant.</p>
+                    <p  class="blog-body">As of 1/3/2019, you'll need to enable Developer Mode on the Hub to use it with Home Assistant</p>
                   </div>
                   <div class="col s12 m12 l4 center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/2000px-Home_Assistant_Logo.svg.png" width="250px" />
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
