@@ -1,15 +1,27 @@
-ianhyzy.me
-==========
-## Hosting Info
-This is my personal website, which should hopefully show off my talent to potential employers. I use GitHub's free Pages service for hosting which includes SSL. I purchased the domain with Google Domains.
+# Minimal Mistakes remote theme starter
 
-## Tools Used
-* [Materialize.css](http://materializecss.com/): a responsive CSS framework based on Google's Material Design
-* [JQuery](https://jquery.com/) is used for some minor additional functionality. Most browsers should already have it in cache, so it doesn't effect load time.
-* I used [Atom](https://atom.io/) as my primary editor due to the extensive built-in plugin database, theme choices, and overall design
-* The [GibHub Desktop](https://desktop.github.com/) app was the easiest way to manage Git repos
+Fork this repo for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
 
-## Other
-* Images are compressed with external tools to get the files size down as much as possible without losing quality for most screens.
-* The site uses the MIT license so on the remote chance someone else actually wants to use this for something they can.
-* Google Analytics is used for tracking people who don't have an adblocker installed
+Contains basic configuration to get you a site with:
+
+- Sample posts.
+- Sample top navigation.
+- Sample author sidebar with social links.
+- Sample footer links.
+- Paginated home page.
+- Archive pages for posts grouped by year, category, and tag.
+- Sample about page.
+- Sample 404 page.
+- Site wide search.
+
+Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+
+---
+
+## Troubleshooting
+
+If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+
+- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
+- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
+- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
