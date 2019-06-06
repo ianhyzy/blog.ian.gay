@@ -40,4 +40,11 @@ Tiller also gives you budgeting tools, dashboards, trands, and so on. But the on
 
 Glide attaches to a Google Spreadsheet and then creates an mobile web app designed around it. Here's what that transaction looks like in my Tiller Glide app:
 
-![screenshot of Glide app showing three transactions]({{ site.baseurl }}/assets/images/glide.png "Glide Screenshot")
+![screenshot of Glide app showing three transactions](/assets/images/glide.jpg)
+
+Glide doesn't just pull the transaction data, it can also display the other information tiller has after clicking on the row. This is configured in Glide:
+
+![screenshot of Glide app properties page](/assets/images/properties-glide.jpg)
+
+The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail row:
+
