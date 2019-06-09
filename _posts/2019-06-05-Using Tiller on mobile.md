@@ -42,9 +42,14 @@ Glide attaches to a Google Spreadsheet and then creates an mobile web app design
 
 ![screenshot of Glide app showing three transactions](/assets/images/glide.jpg)
 
-Glide doesn't just pull the transaction data, it can also display the other information tiller has after clicking on the row. This is configured in Glide:
+<sub><sup><i>And yes, there's a dark mode!</i></sup></sub>
+
+Glide doesn't just pull the transaction data, but that's what's best suited to display in Glide. Many of the other Tiller templayes are Google Sheets-specific graphs and formulae which doesn't translate as well. 
+
+Glide can also display the other transaction information Tiller has after clicking on the row. This is configured in the Properties pane on the right-hand side of the screen in Glide:
 
 ![screenshot of Glide app properties page](/assets/images/properties-glide.jpg)
 
-The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail row:
+The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail view. I choose to display the summary, date, category, and account of transactions to keep things simple. I also have editing turned on, so the category of transactions can be modified from the Glide app.
 
+I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information. I had to modify references for some formulas to work on a new page, and be aware this will increase the calculation time of your Sheet. If your sheet takes a long time to calculate, you can try some of the things listed [here](https://www.benlcollins.com/spreadsheets/slow-google-sheets/), but any Tiller sheet will require a lot of calculations.
