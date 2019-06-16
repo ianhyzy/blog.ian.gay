@@ -4,6 +4,7 @@ excerpt_separator: "<!--more-->"
 permalink: pages/blogs/hass-setup.html
 categories:
   - Blog
+  - Tutorial
 tags:
   - hobby
   - technology

@@ -3,6 +3,7 @@ title: "Using Tiller and Glide Together"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
+  - Tutorial
 tags:
   - hobby
   - technology

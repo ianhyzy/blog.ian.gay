@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Ian Hyzy"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "G Suite guru / compulsive tinkerer"
+  bio    : "G Suite specialist & compulsive tinkerer"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -96,7 +96,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: false
       share: true
       related: false
