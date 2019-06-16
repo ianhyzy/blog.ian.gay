@@ -63,9 +63,6 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "G Suite specialist & compulsive tinkerer"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/ianhyzy"
