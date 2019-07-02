@@ -7,6 +7,7 @@ categories:
 tags:
   - hobby
   - technology
+  - Google
 ---
 
 [Tiller](https://tillerhq.com) is a service that syncs all of your financial data to a Google sheet, and it comes with several great templates to organize your finances.
