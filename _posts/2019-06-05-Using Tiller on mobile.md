@@ -9,8 +9,10 @@ tags:
   - technology
 ---
 
-[Tiller](https://tillerhq.com) is a service that sync all of your finanical data in a Google sheet, and comes with several great templates to organize your data.
-I've been using it for several months now and it works great. Transactions are logged in a Transactions tab, and the main information I use is:
+[Tiller](https://tillerhq.com) is a service that syncs all of your financial data to a Google sheet, and it comes with several great templates to organize your finances.
+I've been using it for several months and it works great - I use the Debt Tracker, Category Detail, and Monthly Budget templates frequently.
+
+But Google Sheets isn't a great user experience on a small mobile device in portrait mode. I wanted a way to view and categorize transactions on mobile. This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app designed around it. As an example, here's what a transaction looks like in the Transactions tab of a Tiller sheet:
 
 <table class="table table-bordered table-hover table-condensed">
 <thead><tr><th title="Field #1">6/3/2019</th>
@@ -21,7 +23,8 @@ I've been using it for several months now and it works great. Transactions are l
 </tr></thead>
 <tbody></tbody></table>
 
-The category `🍞Groceries` is set by me in the categories sheet, which looks like this:
+I like to use emoji in category names to make them easier to differentiate, and this also adds an icon automatically in Glide!
+The category `🍞Groceries` is set by me in the Categories sheet, which looks like this:
 
 <table class="table table-bordered table-hover table-condensed">
 <thead><tr><th title="Field #1">Group</th>
@@ -37,15 +40,13 @@ The category `🍞Groceries` is set by me in the categories sheet, which looks l
 </tr>
 </tbody></table>
 
-Tiller also gives you budgeting tools, dashboards, trands, and so on. But the one downside to Tiller is that it's contrained to a Google Sheet, and while Sheets has a great mobile app, spreadsheets just aren't a good fit for mobile devices. This is where [Glide](https://glideapps.com) comes in.
-
-Glide attaches to a Google Spreadsheet and then creates an mobile web app designed around it. Here's what that transaction looks like in my Tiller Glide app:
+Here's what that transaction looks like in the list in my Tiller Glide app:
 
 ![screenshot of Glide app showing three transactions](/assets/images/glide.jpg)
 
 <sub><sup><i>And yes, there's a dark mode!</i></sup></sub>
 
-Glide doesn't just pull the transaction data, but that's what's best suited to display in Glide. Many of the other Tiller templayes are Google Sheets-specific graphs and formulae which doesn't translate as well. 
+Glide doesn't just pull the transaction data, but that's what's best suited to display in Glide. Many of the other Tiller templates are Google Sheets-specific graphs and formulae which don't translate as well. 
 
 Glide can also display the other transaction information Tiller has after clicking on the row. This is configured in the Properties pane on the right-hand side of the screen in Glide:
 
@@ -56,11 +57,16 @@ The nicest part of Glide is that you can interact with the Glide app in the edit
 ![screenshot of Glide app components page](/assets/images/tiller category choice.png)
 
 
-I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information. You can also link charts from Sheets as images in glide. I use this in detail views to show how that item changed over time. For example, Tiller has a built-in graph for Net Worth that I copied. You'llget the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
+I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information. You can also link charts from Sheets as images in glide. I use this in detail views to show how that item changed over time.
 
 [![screenshot of mobile summary page](/assets/images/tiller mobile summary.png)](/assets/images/tiller mobile summary.png)
 <sub><sup><i>Click to expand image</i></sup></sub>
 
-You may need to modify references for some formulas to work on a new page, and be aware adding more graphs or formulas will increase the calculation time of your Sheet. If your sheet takes a long time to calculate, you can try some of the things listed [here](https://www.benlcollins.com/spreadsheets/slow-google-sheets/) to speed it up, but any Tiller sheet will require a lot of calculations.
+For example, Tiller has a built-in graph for Net Worth that I copied. You'll get the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
 
-With this done, you get a snazzy mobile app showing you everything you'd want to see on your mobile.
+![screenshot of three-dot dropdown showing button to go to chart publish settings](/assets/images/edit chart.jpg)
+![screenshot of publish settings](/assets/images/publish settings.jpg)
+
+You may need to modify references for some formulas to work on a new page, and be aware that adding more graphs or formulas will increase the calculation time of your Sheet. If your sheet takes a long time to calculate, you can try some of the things listed [here](https://www.benlcollins.com/spreadsheets/slow-google-sheets/) to speed it up, but any Tiller sheet will require a lot of calculations.
+
+With Glide reading data from your Tiller Sheets, you can build a snazzy mobile app with everything you want to see and nothing you don't.
