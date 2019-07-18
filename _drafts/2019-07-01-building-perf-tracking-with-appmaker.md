@@ -31,11 +31,11 @@ As Maven Wave continued to experience explosive growth around the world, we made
 It was not only an extremely valuable educational experience for the development team, but for the HR team as well, as the design and processes decisions made for the FUEL app are being used as we look for a read-made replacement. Being forced to redesign the whole performance process from start to finish helped leadership and HR align on their objectives and clarify what we valued most as a company.
 
 ## What did we learn?
-* **AppMaker projects are best for tightly-scoped, desktop-centric apps that predominantly utilize G Suite data _or_ data that can be easily entered by a user into the browser.**
+* **AppMaker projects are best for tightly-scoped, desktop-centric apps that predominantly utilize information from G Suite or information users submit themselves**
   * Tightly-scoped means it does one or two things well. AppMaker does not have any testing infrastructure, and replicating issues proved extremely difficult for us. Simpler apps are easier to manage. App Maker also has lackluster change control, making sharing the project possible on paper but difficult in practice.
-    * some of the challenges with working with multiple people on App Maker:
-      * There was no way to assign code or pages to users. It was hard to tell who was editing or testing what.
-      * Only one person could publish to a given deployment. So if your publisher leaves the company or is on vacation and you need to publish an update, you need to create a new deployment instance with a different link.
+    * Some of the challenges with working with multiple people on App Maker were:
+      * There was no way to assign code or pages to users. It was hard to tell who was editing or testing what - no `git blame` here.
+      * Only one person could publish to a given deployment. So if your publisher leaves the company or is on vacation and you need to publish an update, you need to create a new deployment instance with a different link. We worked around this by giving out a nice URL that did a redirect on the DNS side, but DNS still takes hours to update.
   * Most of the bugs we hit occured with complex custom components we had to write ourselves. Sticking to built-in objects whenever possible will save a development team time and headache.
 * AppMaker is best for small datasets
   * AppMaker should not be used as a way to view or manipulate more than ~50 list or grid objects at a time as performance degrades quickly. It can store much more than this as the backend is just SQL, so it's fine to have a large dataset as long as a small amount of data is shown at once.
