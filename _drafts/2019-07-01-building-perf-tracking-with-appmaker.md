@@ -23,12 +23,12 @@ After several weeks, we had more buy-in from stakeholders and the partners were 
 ## Building it out
 After several months of meeting with  our UX, HR, and leadership teams, we finished the app. We kicked off the launch with a lunch session where we told user about the new system, how to use it, and showed them who to contact if they needed help or had feedback.
 
-We got a lot of great feedback in the following weeks and added several features to the app to make the process more clear, and squashed several bugs.
+We got a lot of great feedback in the following weeks and added several features to the app to make the process more clear, and squashed several bugs. Most of the feedback was either for specific technical issues in the product or about the FUEL process a whole.
 
 ## Going forward
 As Maven Wave continued to experience explosive growth around the world, we made the tough decision to put development on hold and plan to replace it with an enterprise-grade performance management system that includes many other features we'll need as a rapidly growing company. Importantly, we'll take the lessons we learned from developing a real production-ready app with App Maker into future projects. 
 
-It was not only an extremely valuable educational experience for the development team, but for the HR team as well, as the design and processes decisions made for the FUEL app are being used as we look for a read-made replacement. Being forced to redesign the whole performance process from start to finish helped leadership and HR align on their objectives and clarify what we valued most as a company.
+It was not only an extremely valuable educational experience for myself and the development team, but for the HR team as well, as the design and processes decisions made for the FUEL app are being used as we look for a read-made replacement. Being forced to redesign the whole performance process from start to finish helped leadership and HR align on their objectives and clarify what we valued most as a company.
 
 ## What did we learn?
 * **AppMaker projects are best for tightly-scoped, desktop-centric apps that predominantly utilize information from G Suite or information users submit themselves**
@@ -37,6 +37,6 @@ It was not only an extremely valuable educational experience for the development
       * There was no way to assign code or pages to users. It was hard to tell who was editing or testing what - no `git blame` here.
       * Only one person could publish to a given deployment. So if your publisher leaves the company or is on vacation and you need to publish an update, you need to create a new deployment instance with a different link. We worked around this by giving out a nice URL that did a redirect on the DNS side, but DNS still takes hours to update.
   * Most of the bugs we hit occured with complex custom components we had to write ourselves. Sticking to built-in objects whenever possible will save a development team time and headache.
-* AppMaker is best for small datasets
-  * AppMaker should not be used as a way to view or manipulate more than ~50 list or grid objects at a time as performance degrades quickly. It can store much more than this as the backend is just SQL, so it's fine to have a large dataset as long as a small amount of data is shown at once.
+* AppMaker is best for small working datasets
+  * AppMaker should not be used as a way to view or manipulate more than ~50 list or grid objects at a time as performance degrades quickly. It can store much more than this as the backend is SQL, so it's fine to have a large dataset as long as a small amount of data is shown at once.
 * While App Maker now has a mobile view option for pages, it's meant as a desktop __or__ mobile view - it's not responsive. Most App Maker components also seem more designed for desktops than mobile devices, but it will run just fine on mobile devices.
