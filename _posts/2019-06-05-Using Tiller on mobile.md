@@ -18,6 +18,8 @@ You'll get an overview of your accounts and transactions, and can add additional
 
 I wanted a way to view and categorize transactions on mobile, but Google Sheets isn't a great user experience on a small mobile device in portrait mode. This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app using the data in the Sheet. I used Glide with my Tiller sheet to design a beautiful and functional app that allows me to stay on top of my finances at any time in just the way I want, without giving data to a third-party like Mint or Personal Capital.
 
+<p><strong>Glide apps are public by default</strong> - go to `⚙ Settings > Privacy` in your Glide app and choose another option to secure your financial data.</p>{: .notice--danger}
+
 Here's what a transaction looks like in the Transactions tab of a Tiller sheet:
 
 | Date | Description | Category | Amount |
@@ -35,15 +37,15 @@ Category descibes what the transaction is - in this case I bought groceries, so 
 
 Here's what the Transactions sheet from Tiller looks like in the list in my Tiller Glide app:
 
-![screenshot of Glide app showing some transactions](/assets/images/tiller-tx-blue.png){: .align-left}
-
-<sub><sup><i>And yes, there's a dark mode!</i></sup></sub>
+![screenshot of Glide app showing some transactions](/assets/images/tiller-tx-blue.png)
 
 Glide can display more than just transaction data, but that's what's best suited to display for a mobile device for my purposes. Many of the other Tiller templates are Google Sheets-specific graphs and formulae which don't translate as well. 
 
 Glide can also display the other transaction information Tiller has after clicking on the row. This is configured in the Properties pane on the right-hand side of the screen in Glide:
 
 The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail view. I choose to display the summary, date, category, and account of transactions to keep things simple.
+
+<p><strong>Be careful.</strong>  Many parts of the Tiller sheets aren't meant to be editing. Be sure you only edit fields you're supposed to be editing when in your Glide app</p>{: .notice--primary}
 
 ![screenshot of Glide app properties page](/assets/images/glide-tx-ui.png)
 
@@ -55,7 +57,7 @@ I also have editing turned on, so the category of transactions can be modified f
 
 I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information in one place. You can also link charts from Sheets as images in Glide. I use this in detail views to show how that item changed over time.
 
-[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png){: .align-left}
+[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png)
 
 As a quick example, Tiller has a built-in graph for Net Worth that I copied. You'll get the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
 
