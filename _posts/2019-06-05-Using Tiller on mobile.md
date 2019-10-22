@@ -8,6 +8,7 @@ tags:
   - hobby
   - technology
   - Google
+classes: wide
 ---
 
 ### Managing transactions on mobile
@@ -34,7 +35,7 @@ Category descibes what the transaction is - in this case I bought groceries, so 
 
 Here's what the Transactions sheet from Tiller looks like in the list in my Tiller Glide app:
 
-![screenshot of Glide app showing some transactions](/assets/images/tiller-tx-blue.png)
+![screenshot of Glide app showing some transactions](/assets/images/tiller-tx-blue.png){: .align-left}
 
 <sub><sup><i>And yes, there's a dark mode!</i></sup></sub>
 
@@ -42,9 +43,9 @@ Glide can display more than just transaction data, but that's what's best suited
 
 Glide can also display the other transaction information Tiller has after clicking on the row. This is configured in the Properties pane on the right-hand side of the screen in Glide:
 
-![screenshot of Glide app properties page](/assets/images/glide-tx-ui.png)
+The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail view. I choose to display the summary, date, category, and account of transactions to keep things simple.
 
-The nicest part of Glide is that you can interact with the Glide app in the editor to see your changes live. After clicking the row, you can determine what detail appears in the detail view. I choose to display the summary, date, category, and account of transactions to keep things simple. 
+![screenshot of Glide app properties page](/assets/images/glide-tx-ui.png)
 
 I also have editing turned on, so the category of transactions can be modified from the Glide app. You can also modify the edit page - I only edit the Category and Note on mobile, so that's all I show:
 
@@ -54,19 +55,15 @@ I also have editing turned on, so the category of transactions can be modified f
 
 I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information in one place. You can also link charts from Sheets as images in Glide. I use this in detail views to show how that item changed over time.
 
-[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png)]
-<sub><sup><i>Click to expand image</i></sup></sub>
+[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png){: .align-left}
 
 As a quick example, Tiller has a built-in graph for Net Worth that I copied. You'll get the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
-
-![screenshot of three-dot dropdown showing button to go to chart publish settings](/assets/images/edit chart.jpg)
-![screenshot of publish settings](/assets/images/publish settings.jpg)
 
 This isn't the best type of chart to use on mobile - you'll likely want to built a new chart and use a smaller date range or use a chart type more suited for display on mobile. To help fix this, I imported just three months of data using the array import feature (put your range in curly braces like this: `={'Net Worth'!AH2:AJ5}`) and then built a mobile chart with that data. Be aware it can take a while before changes to your chart are reflected in your published image. Here's what my mobile summary sheet looks like in Sheets:
 
 [![screenshot of mobile summary page](/assets/images/sheets-mobile-summary.png)](/assets/images/sheets-mobile-summary.png)]
 
-There's a hidden tab where the chart is pulling data from so Glide doesn't try to import it. Here's the detail view of the chart:
+There's a hidden tab where the chart is pulling data from so Glide doesn't try to import it. Here's the detail view of the chart on a mobile device:
 
 [![screenshot of mobile summary page](/assets/images/glide-mobile-summary.png)](/assets/images/glide-mobile-summary.png)]
 
