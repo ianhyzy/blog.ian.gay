@@ -30,7 +30,9 @@ The category `🍞Groceries` is set by me in the Categories sheet, which looks l
 |------------|--------|---------|
 | 🍞Groceries | Living | Expense |
 
-Here's what that transaction looks like in the list in my Tiller Glide app:
+Category descibes what the transaction is - in this case I bought groceries, so it's easy. Groceries are part of my `living` group. I also have a `discretionary` group and a `bills` group that make up higher-level groups to track related categories. 
+
+Here's what the Transactions sheet from Tiller looks like in the list in my Tiller Glide app:
 
 ![screenshot of Glide app showing some transactions](/assets/images/tiller-tx-blue.png)
 
