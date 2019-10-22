@@ -13,35 +13,22 @@ tags:
 ### Managing transactions on mobile
 
 [Tiller](https://tillerhq.com) is a service that syncs all of your financial data to a Google sheet, and it comes with several great templates to organize your finances.
-You'll get an overview of your accounts, transactions, and some default templates. I categorize all my transaction about once a day to stay on top of my finances - and Tiller has templates so you can see all your category spending in one easy view.
+You'll get an overview of your accounts and transactions, and can add additional templates to budget or track debt. I use a category template to categorize all my transaction about once a day to stay on top of my finances - and Tiller has built-in sheets with functions you can run to see all your category spending in one easy view.
 
-I wanted a way to view and categorize transactions on mobile, but Google Sheets isn't a great user experience on a small mobile device in portrait mode.  This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app designed around it. As an example, here's what a transaction looks like in the Transactions tab of a Tiller sheet:
+I wanted a way to view and categorize transactions on mobile, but Google Sheets isn't a great user experience on a small mobile device in portrait mode. This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app using the data in the Sheet. I used Glide with my Tiller sheet to design a beautiful and functional app that allows me to stay on top of my finances at any time in just the way I want, without giving data to a third-party like Mint or Personal Capital.
 
-<table class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">10/20/2019</th>
-<th title="Field #2">Marianos #538</th>
-<th title="Field #3">🍞Groceries</th>
-<th title="Field #4">-$55.75</th>
-<th title="Field #5">Quicksilver</th>
-</tr></thead>
-<tbody></tbody></table>
+Here's what a transaction looks like in the Transactions tab of a Tiller sheet:
+
+| Date | Description | Category | Amount |
+|------------|--------------------------------------|------------|---------|
+| 10/20/2019 | Sampay Marianos #538chicago IL x1979 | 🍞Groceries | -$55.75 |
 
 I like to use emoji in category names to make them easier to differentiate, and this also adds an icon automatically in Glide!
 The category `🍞Groceries` is set by me in the Categories sheet, which looks like this:
 
-<table class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">Group</th>
-<th title="Field #2">Category</th>
-<th title="Field #3">Type</th>
-<th title="Field #4">Subtype</th>
-</tr></thead>
-<tbody><tr>
-<td>Living</td>
-<td>🍞Groceries</td>
-<td>Expense</td>
-<td>Flex</td>
-</tr>
-</tbody></table>
+| Category | Group | Type |
+|------------|--------|---------|
+| 🍞Groceries | Living | Expense |
 
 Here's what that transaction looks like in the list in my Tiller Glide app:
 
