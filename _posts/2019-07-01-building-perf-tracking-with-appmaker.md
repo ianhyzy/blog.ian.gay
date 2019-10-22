@@ -36,7 +36,7 @@ It was not only an extremely valuable educational experience for myself and the 
     * Some of the challenges with working with multiple people on App Maker were:
       * There was no way to assign code or pages to users. It was hard to tell who was editing or testing what - no `git blame` here.
       * Only one person could publish to a given deployment. So if your publisher leaves the company or is on vacation and you need to publish an update, you need to create a new deployment instance with a different link. We worked around this by giving out a nice URL that did a redirect on the DNS side, but DNS still takes hours to update.
-  * Most of the bugs we hit occured with complex custom components we had to write ourselves. Sticking to built-in objects whenever possible will save a development team time and headache.
+  * Most of the bugs we hit occurred with complex custom components we had to write ourselves. Sticking to built-in objects whenever possible will save a development team time and headache.
 * AppMaker is best for small working datasets
   * AppMaker should not be used as a way to view or manipulate more than ~50 list or grid objects at a time as performance degrades quickly. It can store much more than this as the backend is SQL, so it's fine to have a large dataset as long as a small amount of data is shown at once.
 * While App Maker now has a mobile view option for pages, it's meant as a desktop __or__ mobile view - it's not responsive. Most App Maker components also seem more designed for desktops than mobile devices, but it will run just fine on mobile devices.

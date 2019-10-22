@@ -1,5 +1,5 @@
 ---
-title: "Using Tiller and Glide Together"
+title: "Automatic, flexible, and mobile finance tracking with Tiller and Glide"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
@@ -11,9 +11,9 @@ tags:
 ---
 
 [Tiller](https://tillerhq.com) is a service that syncs all of your financial data to a Google sheet, and it comes with several great templates to organize your finances.
-I've been using it for several months and it works great - I use the Debt Tracker, Category Detail, and Monthly Budget templates frequently.
+You'll get an overview of your accounts, transactions, and some default templates. I categorize all my transaction about once a day to stay on top of my finances - and Tiller has templates so you can see all your category spending in one easy view.
 
-But Google Sheets isn't a great user experience on a small mobile device in portrait mode. I wanted a way to view and categorize transactions on mobile. This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app designed around it. As an example, here's what a transaction looks like in the Transactions tab of a Tiller sheet:
+I wanted a way to view and categorize transactions on mobile, but Google Sheets isn't a great user experience on a small mobile device in portrait mode.  This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app designed around it. As an example, here's what a transaction looks like in the Transactions tab of a Tiller sheet:
 
 <table class="table table-bordered table-hover table-condensed">
 <thead><tr><th title="Field #1">6/3/2019</th>
@@ -47,7 +47,7 @@ Here's what that transaction looks like in the list in my Tiller Glide app:
 
 <sub><sup><i>And yes, there's a dark mode!</i></sup></sub>
 
-Glide doesn't just pull the transaction data, but that's what's best suited to display in Glide. Many of the other Tiller templates are Google Sheets-specific graphs and formulae which don't translate as well. 
+Glide can display more than just transaction data, but that's what's best suited to display for a mobile device for my purposes. Many of the other Tiller templates are Google Sheets-specific graphs and formulae which don't translate as well. 
 
 Glide can also display the other transaction information Tiller has after clicking on the row. This is configured in the Properties pane on the right-hand side of the screen in Glide:
 
