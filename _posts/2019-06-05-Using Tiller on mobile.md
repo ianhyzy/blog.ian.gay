@@ -65,7 +65,7 @@ I also have editing turned on, so the category of transactions can be modified f
 
 I added a page to my Tiller Sheet that takes the values from several pages and puts them on one Sheet, which allows me to create a Glide view that shows that information in one place. You can also link charts from Sheets as images in Glide. I use this in detail views to show how that item changed over time.
 
-[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png)
+[![screenshot of mobile summary page](/assets/images/tiller-mobile-summary.png)](/assets/images/tiller-mobile-summary.png)]
 <sub><sup><i>Click to expand image</i></sup></sub>
 
 As a quick example, Tiller has a built-in graph for Net Worth that I copied. You'll get the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
@@ -73,11 +73,17 @@ As a quick example, Tiller has a built-in graph for Net Worth that I copied. You
 ![screenshot of three-dot dropdown showing button to go to chart publish settings](/assets/images/edit chart.jpg)
 ![screenshot of publish settings](/assets/images/publish settings.jpg)
 
-This isn't the best type of chart to use on mobile - you'll likely want to built a new chart and use a smaller date range or use a chart type more suited for display on mobile.
+This isn't the best type of chart to use on mobile - you'll likely want to built a new chart and use a smaller date range or use a chart type more suited for display on mobile. To help fix this, I imported just three months of data using the array import feature (put your range in curly braces like this: `={'Net Worth'!AH2:AJ5}`) and then built a mobile chart with that data. Be aware it can take a while before changes to your chart are reflected in your published image. Here's what my mobile summary sheet looks like in Sheets:
 
-With Glide reading data from your Tiller Sheets, you can build a snazzy mobile app with everything you want to see and nothing you don't.
+[![screenshot of mobile summary page](/assets/images/sheets-mobile-summary.png)](/assets/images/sheets-mobile-summary.png)]
 
-#### Having trouble?
+There's a hidden tab where the chart is pulling data from so Glide doesn't try to import it. Here's the detail view of the chart:
+
+[![screenshot of mobile summary page](/assets/images/glide-mobile-summary.png)](/assets/images/glide-mobile-summary.png)]
+
+With Glide reading data from your Tiller Sheets, you can build a snazzy mobile app with everything you want to see and nothing you don't in just a few minutes - for free!
+
+##### Having trouble?
 You may need to modify references for some formulas to work on a new tab in your sheet, and be aware that adding more graphs or formulas will increase the calculation time of your Sheet. If your sheet takes a long time to calculate, you can try some of the things listed [here](https://www.benlcollins.com/spreadsheets/slow-google-sheets/) to speed it up, but any Tiller sheet will require a lot of calculations.
 
 Glide has made performance improvements to handle very large Sheets, but if your sheet gets too big you may want to pull only the data you need with `=IMPORTRANGE` to a Sheet you only use with Glide.
