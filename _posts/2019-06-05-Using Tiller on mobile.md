@@ -9,6 +9,7 @@ tags:
   - technology
   - Google
 classes: wide
+comments: true
 ---
 
 ### Managing transactions on mobile
