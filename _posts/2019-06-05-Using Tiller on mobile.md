@@ -15,7 +15,7 @@ comments: true
 ### Managing transactions on mobile
 
 [Tiller](https://tillerhq.com) is a service that syncs all of your financial data to a Google sheet, and it comes with several great templates to organize your finances.
-You'll get an overview of your accounts and transactions, and can add additional templates to budget or track debt. I use a category template to categorize all my transaction about once a day to stay on top of my finances - and Tiller has built-in sheets with functions you can run to see all your category spending in one easy view.
+You'll get an overview of your accounts and transactions, and can add additional templates to budget or track debt. I use a category template to categorize all my transactions about once a day to stay on top of my finances - and Tiller has built-in sheets with functions you can run to see all your category spending in one easy view.
 
 I wanted a way to view and categorize transactions on mobile, but Google Sheets isn't a great user experience on a small mobile device in portrait mode. This is where [Glide](https://glideapps.com) comes in. Glide attaches to a Google Spreadsheet and then creates a mobile web app using the data in the Sheet. I used Glide with my Tiller sheet to design a beautiful and functional app that allows me to stay on top of my finances at any time in just the way I want, without giving data to a third-party like Mint or Personal Capital.
 
@@ -34,7 +34,7 @@ The category `🍞Groceries` is set by me in the Categories sheet, which looks l
 |------------|--------|---------|
 | 🍞Groceries | Living | Expense |
 
-Category descibes what the transaction is - in this case I bought groceries, so it's easy. Groceries are part of my `living` group. I also have a `discretionary` group and a `bills` group that make up higher-level groups to track related categories. 
+Category describes what the transaction is - in this case I bought groceries, so it's easy. Groceries are part of my `living` group. I also have a `discretionary` group and a `bills` group that make up higher-level groups to track related categories. 
 
 Here's what the Transactions sheet from Tiller looks like in the list in my Tiller Glide app:
 
@@ -62,7 +62,7 @@ I added a page to my Tiller Sheet that takes the values from several pages and p
 
 As a quick example, Tiller has a built-in graph for Net Worth that I copied. You'll get the URL to put in Glide by going to the three-dot menu in the upper right of the chart, clicking `Publish Chart` and then choosing the chart title and selecting `image` from the dropdown. You'll also want to check the box that automatically republishes the chart when changes are made.
 
-This isn't the best type of chart to use on mobile - you'll likely want to built a new chart and use a smaller date range or use a chart type more suited for display on mobile. To help fix this, I imported just three months of data using the array import feature (put your range in curly braces like this: `={'Net Worth'!AH2:AJ5}`) and then built a mobile chart with that data. Be aware it can take a while before changes to your chart are reflected in your published image. Here's what my mobile summary sheet looks like in Sheets:
+This isn't the best type of chart to use on mobile - you'll likely want to build a new chart and use a smaller date range or use a chart type more suited for display on mobile. To help fix this, I imported just three months of data using the array import feature (put your range in curly braces like this: `={'Net Worth'!AH2:AJ5}`) and then built a mobile chart with that data. Be aware it can take a while before changes to your chart are reflected in your published image. Here's what my mobile summary sheet looks like in Sheets:
 
 [![screenshot of mobile summary page](/assets/images/sheets-mobile-summary.png)](/assets/images/sheets-mobile-summary.png)]
 
