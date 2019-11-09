@@ -10,6 +10,8 @@ tags:
   - technology
 ---
 
+<p>This guide is a work-in-progress. Some parts may be out of date or not available yet.</p>{: .notice--primary}
+
 # Intro
 I've setup everything in my home to talk to everything else, which is no small feat. I have my media center, lights, music, switches, and more controlled with Home Assistant. Sonarr and Radarr download and organize movies & TV shows that Plex then streams to any device. I can press one button on my universal remote to dim the lights and turn on my TV and soundbar to the right input to start a movie. This is what it takes to make that happen.
 
