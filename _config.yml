@@ -122,3 +122,6 @@ comments:
   provider: "disqus"
   disqus:
     shortname: "ianhyzy-me"
+
+twitter:
+  username: "ianhyzy"
