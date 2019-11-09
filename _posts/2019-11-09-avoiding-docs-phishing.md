@@ -43,4 +43,4 @@ No matter what method you choose, you should see something like this in `Setting
 ![filter as it appears in settings](/assets/images/drive-sharing-filter.png)
 
 
-Now that you're no longer seeing request emails, make sure people who may need to legitimately request access know where to contact you to ask.
+Now that you're no longer seeing request emails, make sure people who may need to legitimately request access know where to contact you to ask. Also note that this won't prevent phishing emails faking the "Request for Access" message from appearing (You could modify a search query to try to find similar messages by keyword, but the false positive rate is high) - but now that you know you won't see any real requests for access you can assume any others you see are fake.
