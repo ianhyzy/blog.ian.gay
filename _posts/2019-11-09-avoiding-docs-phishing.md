@@ -16,12 +16,19 @@ If you use Google Docs and Gmail, you may have seen an email like this before:
 
 ![screenshot of request for access email](/assets/images/request-for-access-email.png)
 
-This is one of the most dangerous emails you can get, for a few reasons:
+This is a very dangerous email for a few reasons:
 
 * You only see the name of the person requesting - if you want to see their email, you need to hover over their name (or long-press on mobile). This allows a bad actor to make an account with the same name as someone you may know but with a different email. The sharing interface in Google Drive will show the name of the person and not their email by default as well. If you aren't careful, you may click the link and approve access for the bad actor. 
 * Emails like this can be easily copied by bad actors and sent with phishing links - you may think you're clicking a link to be taken to Google Drive but in reality you would be taken to a malicious webpage.
+* It's an immediate call to action that you can complete in a few seconds - even if the request in from a legitimate person you know who thinks they should have access, you only need to slip up and provide someone the wrong access once to create a huge problem. In environments with sensitive data, any access request should take more than a few seconds to complete.
 
-So, how do you prevent this type of phishing? One way is to simply delete all sharing request emails automatically. If someone needs access to a doc you have, have them reach out using Hangouts Chat, Slack, Signal, or other sources where you can better identify the person requesting access.
+So, how do you prevent this type of phishing? The best way is to simply delete all sharing request emails automatically. If someone needs access to a doc you have, have them reach out using Hangouts Chat, Slack, Signal, or other sources where you can better identify the person requesting access.
+
+I've created a filter that can filter out all of these messages. 
+
+To use it, click the gear icon and select `Settings > Filters and Blocked Addresses`. Then, press `Import Filters` on that screen and upload <a href="/assets/mailFilters.xml" download>this file</a>. This will import the filter and any Request for Access emails will be automatically deleted.
+
+If you'd like to set up the filter yourself or customize it to do something other than delete, follow these steps:
 
 1. Paste this into your Gmail search bar:
 
@@ -29,11 +36,11 @@ So, how do you prevent this type of phishing? One way is to simply delete all sh
 
 2. Then click the small down arrow or carat in the search bar.
 3. Then click `Create Filter`
-4. Then click `Delete it`
+4. Then select what you want to happen to "Request for Access" emails.
 5. Then click `Create Filter`
 
-If you click the gear icon and select `Settings > Filters and Blocked Addresses` you should see this in your filters list:
-
+No matter what method you choose, you should see something like this in `Settings > Filters and Blocked Addresses`:
 ![filter as it appears in settings](/assets/images/drive-sharing-filter.png)
 
-If you don't see that or are having trouble, press `Import Filters` on that screen and upload <a href="/assets/mailFilters.xml" download>this file</a>.
+
+Now that you're no longer seeing request emails, make sure people who may need to legitimately request access know where to contact you to ask.
