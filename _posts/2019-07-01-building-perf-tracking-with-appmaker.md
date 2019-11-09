@@ -8,6 +8,8 @@ tags:
   - work
   - technology
   - Google
+classes: wide
+comments: true
 ---
 
 ## Summary

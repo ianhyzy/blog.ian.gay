@@ -8,6 +8,8 @@ categories:
 tags:
   - hobby
   - technology
+classes: wide
+comments: true
 ---
 
 <p>This guide is a work-in-progress. Some parts may be out of date or not available yet.</p>{: .notice--primary}
