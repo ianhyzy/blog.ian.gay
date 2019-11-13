@@ -1,5 +1,5 @@
 ---
-title: "Prevent Google Docs Phishing with one filter"
+title: "Prevent Google Docs phishing with one filter"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorial
