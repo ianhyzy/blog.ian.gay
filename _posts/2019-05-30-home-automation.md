@@ -34,19 +34,29 @@ You'll also need to enable SSH under `Control Panel > Terminal` and `SNMP`.
 # Step 2: Installing Home Assistant
 Installing home assistant requires a few steps with Docker and your NAS.
 
-## Step 2.1: Installing the USB drivers
-The Z-Wave/Zigbee USB stick requires some third-party drivers to function properly. Find the right version [here](http://www.jadahl.com/). You'll need to know the CPU generation of your Synology. The DS418play has an Apollo Lake processor. The device will require a reboot once the drivers installed.
-
-## Step 2.2: Install the Home Assistant docker container
+## Step 2.1: Install the Home Assistant docker container
 Docker "containers" are tiny operating systems built to run a specific program or set of programs. They're nice to use because they're easy to update and configure.
 
 When Docker is upgraded, all data in the container is lost. To make sure you don't lost any data, make a folder in a Synology library. You'll tell the Home Assistant container to store configuration files in this folder. This will also make them much easier to edit. Choose the folder you made as a volume when setting up your Home Assistant container and map it to `/config` in the container. To run your container, you'll need to log into your Synology via SSH and use the command line to start your container. The Docker UI in Synology doesn't support attaching USB devices to containers, but luckily you should only need to do this once (you can start, stop, and update the home assistant container from the UI and it will remember the USB setting).
 
-The command I use to start my container looks like this, but be aware you'll need to change the paths to match what you set up on your NAS:
+Adding your Zigbee devices takes some command-line wizardry. If you don't plan on using Zigbee or Z-Wave devices you can skip this step.
 
-`sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config -v /volume1/Vault/configs/cf-ssl/:/ssl --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant`
+### (Optional) Enabling USB support
 
-I keep this command in a comment in my config file so I don't need to remember it.
+The Z-Wave/Zigbee USB stick requires some third-party drivers to function properly. Find the right version [here](http://www.jadahl.com/). You'll need to know the CPU generation of your Synology. The DS418play has an Apollo Lake processor. The device will require a reboot once the drivers installed.
+
+Then, SSH into your Synology device. Run cat /dev/tty*. You should see /dev/ttyUSB0 and /dev/ttyUSB1. This shows the USB device is recognized by the Synology.
+
+The below command assumes you downloaded the container named `home-assistant` from `homeassisstant`. I keep my config files in the Synology folder `/volume1/Vault/configs/ha/config`. Make sure you keep the `:/config` - this maps the Synology directory to a mounted directory in the container.
+
+The command I use to start my container looks like this:
+
+```
+sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant
+```
+
+This should create the docker container with everything it needs to run Home Assistant with Zigbee and Z-Wave devices. I keep this command in a comment in my config file so I don't need to remember it, but you should only need it this once.
+Zigbee should be `/tty/USB1`. To add it to Home Assistant, active the Zigbee component in your config. You'll need to specify a complete path to store the `zigbee.db` file - it will be automatically created but the directory it's in must exist. 
 
 To verify you've installed Home Assistant correctly, go to http://your_Synology_IP:8123 and ensure you can see the Home Assistant welcome screen.
 
@@ -66,16 +76,8 @@ I use the following services or devices:
 I'll go through each and describe what I use it for and my configuration.
 
 ## Zigbee Lights & Switches
-Adding your Zigbee devices takes some command-line wizardry. First, SSH into your Synology device. Run cat /dev/tty*. You should see /dev/ttyUSB0 and /dev/ttyUSB1. This shows the USB device is recognized by the Synology.
 
-The below command assumes you downloaded the container named home-assistant from homeassisstant. I keep my config files in the Synology folder /volume1/Vault/configs/ha/config. Make sure you keep the :/config - this maps the Synology directory to a mounted directory in the container.
-
-Then, run the command below:
-```
-sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant
-```
-This should create the docker container with everything it needs to run Home Assistant with Zigbee and Z-Wave devices.
-Zigbee should be `/tty/USB1`. To add it to Home Assistant, active the Zigbee component in your config. You'll need to specify a complete path to store the `zigbee.db` file - it will be automatically created but the directory it's in must exist.
+As noted above, your configuration should look like this:
 
 ```
 zha:
@@ -83,7 +85,7 @@ zha:
   database_path: /config/zigbee.db
 ```
 
-After doing this and performing a reboot of Home Assistant, you should see the zha.permit and zha.remove under the "Services" menu and in the Settings page. Put your lights into pairing mode, and then click call service. They should flash to confirm the pairing.
+After doing this and performing a reboot of Home Assistant, you should see the zha.permit and zha.remove under the "Services" menu and in the Settings page. Put your lights into pairing mode, and then click `call service`. They should flash to confirm the pairing.
 
 ### Grouping Lights
 You'll likely want to [group lights into rooms](https://www.home-assistant.io/integrations/light.group/). You'll need to specify the entity names of the things you're grouping in your `config.yaml`. My groups look like this (I mix and match brands of lights):
