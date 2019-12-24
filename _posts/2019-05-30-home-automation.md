@@ -10,6 +10,7 @@ tags:
   - technology
 classes: wide
 comments: true
+toc: true
 ---
 
 <p>This guide is a work-in-progress. Some parts may be out of date or not available yet.</p>{: .notice--primary}

@@ -1,18 +1,45 @@
 ---
+title: "Hi there."
+layout: splash
 permalink: /
-title: "About Me"
-layout: home
-author_profile: true
+date: 2016-03-23T11:48:41-04:00
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.75"
+  overlay_image: /assets/images/trains.jpg
+  actions:
+    - label: "Read more"
+      url: "./about"
+excerpt: "My name is Ian Hyzy, and I help users stay secure and collaborate better at work."
+intro: 
+  - excerpt: "At [Maven Wave](https://www.mavenwave.com/), I work with some of the world's largest G Suite clients to bring their legacy data to G Suite and ensure their users have an easy transition from their legacy programs."
+
+feature_row:
+  - image_path: assets/images/texas-senate-cropped.jpg
+    alt: "photo of the texas senate I took"
+    title: "Volunteer Work"
+    excerpt: "I work with [Ragtag](ragtag.org) to help progressive causes get the tech help they need."
+    url: "./tags/#ragtag"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+  - image_path: /assets/images/forklift-cropped.jpg
+    alt: "forklift plays tic-tac-toe"
+    title: "Hack the planet"
+    excerpt: "I have several personal projects ranging from robotics to home automation"
+    url: "./tags/#technology"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+  - image_path: /assets/images/computers-cropped.jpg
+    alt: "a bunch of old computers"
+    title: "What I do all day"
+    excerpt: "I sometimes write about what, exactly, I do all day."
+    url: "./tags/#work"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
-Back in 2017, I graduated with a B.S. in Management Information Systems from Milwaukee School of Engineering. As part of my year abroad studying in Germany, I also graduated with a degree from the Fachhochschule Lübeck in Wirtschaftsingenieurwesen (Business Engineering).
+{% include feature_row id="intro" type="center" %}
 
-Now, at [Maven Wave](https://www.mavenwave.com/), I work with some of the world's largest G Suite clients to bring their legacy data to G Suite and ensure their users have an easy transition from their legacy programs. G Suite is a fantastic set of tools for collaboration and I'm happy to guide clients through the more complex aspects of configuration to make sure their data is secure and their users are happy and productive.
-
-I also develop apps with Google Apps Script to make user's live easier, and App Maker to build time-saving apps at a speed and cost that previously wasn't possible.
-
-I have experience administrating Linux, Mac OS, and Windows systems. I am also familiar with JavaScript, Python, and SQL-based database systems. I'm passionate about technology and do my best to keep up with all facets of the industry as much as possible, especially concerning security and all things G Suite.
-
-For information on what this site uses, check out the [GitHub](https://github.com/ianhyzy/ianhyzy.me) page.
-
-For a full look at my work history, skills, and other related information, check out my [LinkedIn](https://www.linkedin.com/in/ian-hyzy-81a9057b). If you have any questions or would like to chat, feel free to email me at ianhyzy (at) gmail.com.
+{% include feature_row %}

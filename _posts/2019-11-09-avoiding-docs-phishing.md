@@ -6,6 +6,7 @@ categories:
 tags:
   - technology
   - Google
+  - Ragtag
 classes: wide
 comments: true
 ---
