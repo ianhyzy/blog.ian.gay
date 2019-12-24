@@ -1,6 +1,8 @@
 ---
 permalink: /
-title: "About"
+title: "About Me"
+layout: home
+author_profile: true
 ---
 
 Back in 2017, I graduated with a B.S. in Management Information Systems from Milwaukee School of Engineering. As part of my year abroad studying in Germany, I also graduated with a degree from the Fachhochschule Lübeck in Wirtschaftsingenieurwesen (Business Engineering).
