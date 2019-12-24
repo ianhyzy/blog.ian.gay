@@ -41,5 +41,6 @@ If you'd like to set up the filter yourself or customize it to do something othe
 No matter what method you choose, you should see something like this in `Settings > Filters and Blocked Addresses`:
 ![filter as it appears in settings](/assets/images/drive-sharing-filter.png)
 
-
 Now that you're no longer seeing request emails, make sure people who may need to legitimately request access know where to contact you to ask. Also note that this won't prevent phishing emails faking the "Request for Access" message from appearing (You could modify a search query to try to find similar messages by keyword, but the false positive rate is high) - but now that you know you won't see any real requests for access you can assume any others you see are fake.
+
+If you need to keep seeing these emails and acting on them - for example, if you're in a political campaign and many of your contributors won't have a way to contact you outside of email - I would still recommend using the filter to label messages and separating them from your regular inbox via a label. You can take the time when you're at a computer to go through your requests and verify they're legitimate before approving them - don't approve anything when you're feeling tired or overwhelmed.

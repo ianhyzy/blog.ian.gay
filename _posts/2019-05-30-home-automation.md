@@ -27,9 +27,9 @@ Most guides for Home Assistant assume you're using a generic Linux box or a Rasp
 * 📺Harmony Hub + Home Control remote
 
 # Step 1: Preparing your NAS and Docker
-While you will need to use the command line to setup Home Assistant in docker, I still use the docker package that's available to easily manage my six other docker installs, which do not need the command line options to start. The Docker package doesn't support the device argument, which is used to allow the docker container to read the Zigbee/Z-Wave USB stick. It's easy to do, just follow this guide to install the .spk.
+While you will need to use the command line to setup Home Assistant in docker, I still use the docker package that's available to easily manage my six other docker installs, which do not need the command line options to start. The Docker package doesn't support the device argument, which is used to allow the docker container to read the Zigbee/Z-Wave USB stick. It's easy to do, just follow [this guide](https://tylermade.net/2017/09/28/how-to-install-docker-on-an-unsupported-synology-nas/) to install the offical Docker `.spk` via Package Center.
 
-You'll also need to enable SSH under Control Panel > Terminal and SNMP
+You'll also need to enable SSH under `Control Panel > Terminal` and `SNMP`.
 
 # Step 2: Installing Home Assistant
 Installing home assistant requires a few steps with Docker and your NAS.
@@ -40,10 +40,13 @@ The Z-Wave/Zigbee USB stick requires some third-party drivers to function proper
 ## Step 2.2: Install the Home Assistant docker container
 Docker "containers" are tiny operating systems built to run a specific program or set of programs. They're nice to use because they're easy to update and configure.
 
-When Docker is upgraded, all data in the container is lost. To make sure you don't lost any data, make a folder in a Synology library. You'll tell the Home Assistant container to store configuration files in this folder. This will also make them much easier to edit.
+When Docker is upgraded, all data in the container is lost. To make sure you don't lost any data, make a folder in a Synology library. You'll tell the Home Assistant container to store configuration files in this folder. This will also make them much easier to edit. Choose the folder you made as a volume when setting up your Home Assistant container and map it to `/config` in the container. To run your container, you'll need to log into your Synology via SSH and use the command line to start your container. The Docker UI in Synology doesn't support attaching USB devices to containers, but luckily you should only need to do this once (you can start, stop, and update the home assistant container from the UI and it will remember the USB setting).
 
-## Step 2.3 (Optional): Install Home Assistant Configurator
-You can edit your files with the Synology text editor, or mount your file share on a PC and use your favorite text editing program. Another option is to use HASS Configurator, a web-based text editor than can load your config files. It also provides helpful links and verification that your files are formatted correctly.
+The command I use to start my container looks like this, but be aware you'll need to change the paths to match what you set up on your NAS:
+
+`sudo docker run --name home-assistant --restart=always --net=host -itd -v /volume1/Vault/configs/ha/config:/config -v /volume1/Vault/configs/cf-ssl/:/ssl --device /dev/ttyUSB0 --device /dev/ttyUSB1 homeassistant/home-assistant`
+
+I keep this command in a comment in my config file so I don't need to remember it.
 
 To verify you've installed Home Assistant correctly, go to http://your_Synology_IP:8123 and ensure you can see the Home Assistant welcome screen.
 
@@ -81,6 +84,25 @@ zha:
 ```
 
 After doing this and performing a reboot of Home Assistant, you should see the zha.permit and zha.remove under the "Services" menu and in the Settings page. Put your lights into pairing mode, and then click call service. They should flash to confirm the pairing.
+
+### Grouping Lights
+You'll likely want to [group lights into rooms](https://www.home-assistant.io/integrations/light.group/). You'll need to specify the entity names of the things you're grouping in your `config.yaml`. My groups look like this (I mix and match brands of lights):
+
+```
+light:
+  - platform: group
+    name: Studio Lights
+    entities:
+      - light.osram_lightify_a19_rgbw_00a450f5_3 # Lamp
+      - light.osram_lightify_a19_rgbw_00a46aa1_3 # Fan light
+      - light.ledvance_flex_rgbw_0000820d_1 # LED strip
+  - platform: group
+    name: Kitchen Lights
+    entities:
+      - light.ikea_of_sweden_tradfri_bulb_e26_ws_opal_980lm_feca10c4_1 # Fridge light
+      - light.ikea_of_sweden_tradfri_bulb_e26_ws_opal_980lm_fe4b5914_1 # Sink Light
+      - light.ikea_of_sweden_tradfri_bulb_e26_ws_opal_980lm_fe4b8996_1 # Hall light
+```      
 
 ## Logitech Harmony
 ### 🔧Harmony Setup
@@ -130,3 +152,21 @@ weather:
       - precip_probability
       - temperature
 ```
+
+## Spotify
+You can connect your Spotify account to see what's playing and control playback easily. I didn't change anything from the official instructions [here](https://www.home-assistant.io/integrations/spotify/); the media_player object isn't easily configured.
+
+## TP-Link Smart Plugs
+In the most recent version of Home Assistant, you should be able to add plugs under Settings > Integrations in the UI. In your config file, you only need to specify the IP of the device and an optional name:
+
+```
+switch:
+  - platform: tplink
+    host: 192.168.1.231
+    name: Christmas Tree
+```
+
+## Closing thoughts
+This is everything I have set up right now - I'm still working on getting presence detection set up so my lights will turn on when I get home and off when I leave. There's also community packages for Sonnar and Radarr to show my TV and film collections I'd like to add to my dashboard. Luckily, Home Assistant has been extremely stable for me - after the initial config I haven't had issues with things not working entirely. I have some issues, but nothing major except that I would not recommend buying OSRAM / Lightify bulbs as they are extremely short-lived.
+
+Once you get everything set up, you will likely want to keep tweaking and adding to it forever - there's fewer and fewer limitations the more you know about Home Assistant.
