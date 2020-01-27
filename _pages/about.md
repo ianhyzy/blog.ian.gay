@@ -12,6 +12,8 @@ I also develop apps with Google Apps Script to make user's live easier, and App 
 
 I have experience administrating Linux, Mac OS, and Windows systems. I am also familiar with JavaScript, Python, and SQL-based database systems. I'm passionate about technology and do my best to keep up with all facets of the industry as much as possible, especially concerning security and all things G Suite.
 
+Outside of the computer screen, I love to go to movies or go for a bike ride along the lakeshore.
+
 For information on what this site uses, check out the [GitHub](https://github.com/ianhyzy/ianhyzy.me) page.
 
 For a full look at my work history, skills, and other related information, check out my [LinkedIn](https://www.linkedin.com/in/ian-hyzy-81a9057b). If you have any questions or would like to chat, feel free to email me at ianhyzy (at) gmail.com.

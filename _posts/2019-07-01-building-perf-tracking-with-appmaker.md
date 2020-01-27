@@ -12,6 +12,8 @@ classes: wide
 comments: true
 ---
 
+<p><strong>AppMaker is being deprecated.</strong> For an alternative, try [AppSheet](https://www.appsheet.com/) or [Glide](https://www.glideapps.com/).</p>{: .notice--danger}
+
 ## Summary
 Google's App Maker is a new tool to rapidly and easily build apps on Google's App Script platform. It provides an easy way to design web-based UIs, with many built-in components like tables and buttons styled in Google's Material Design language. At Maven Wave, our previous employee performance tracking system - known as FUEL - was spreadsheet-based and growing harder to manage as the company grew. A co-worker suggested the new App Maker tool could be used to streamline this process, and I jumped at the chance to try it out and expand my skills. 
 
@@ -38,7 +40,9 @@ It was not only an extremely valuable educational experience for myself and the 
     * Some of the challenges with working with multiple people on App Maker were:
       * There was no way to assign code or pages to users. It was hard to tell who was editing or testing what - no `git blame` here.
       * Only one person could publish to a given deployment. So if your publisher leaves the company or is on vacation and you need to publish an update, you need to create a new deployment instance with a different link. We worked around this by giving out a nice URL that did a redirect on the DNS side, but DNS still takes hours to update.
+      * AppMaker has sparse documentation and, as of now, little community support, so working around AppMaker-specific behavior can be challenging. For example, we had issues joining three sequel tables - it worked fine on a normal SQL install but failed in AppMaker, and we had no idea why.
   * Most of the bugs we hit occurred with complex custom components we had to write ourselves. Sticking to built-in objects whenever possible will save a development team time and headache.
+    * Unfortunately, our custom component was a user picker - the built in user picker did not give us the data we needed.
 * AppMaker is best for small working datasets
   * AppMaker should not be used as a way to view or manipulate more than ~50 list or grid objects at a time as performance degrades quickly. It can store much more than this as the backend is SQL, so it's fine to have a large dataset as long as a small amount of data is shown at once.
-* While App Maker now has a mobile view option for pages, it's meant as a desktop __or__ mobile view - it's not responsive. Most App Maker components also seem more designed for desktops than mobile devices, but it will run just fine on mobile devices.
+* While App Maker now has a mobile view option for pages, it's meant as a desktop __or__ mobile view - it's not responsive. Most App Maker components also seem more designed for desktops than mobile devices.
