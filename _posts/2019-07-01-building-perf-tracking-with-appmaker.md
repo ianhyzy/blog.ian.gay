@@ -12,7 +12,7 @@ classes: wide
 comments: true
 ---
 
-<p><strong>AppMaker is being deprecated.</strong> For an alternative, try [AppSheet](https://www.appsheet.com/) or [Glide](https://www.glideapps.com/).</p>{: .notice--danger}
+<p><strong>AppMaker is being deprecated.</strong> For an alternative, try <a href="https://www.appsheet.com/" target="_new">AppSheet</a> or <a href="https://www.glideapps.com/"  target="_new">Glide</a>.</p>{: .notice--danger}
 
 ## Summary
 Google's App Maker is a new tool to rapidly and easily build apps on Google's App Script platform. It provides an easy way to design web-based UIs, with many built-in components like tables and buttons styled in Google's Material Design language. At Maven Wave, our previous employee performance tracking system - known as FUEL - was spreadsheet-based and growing harder to manage as the company grew. A co-worker suggested the new App Maker tool could be used to streamline this process, and I jumped at the chance to try it out and expand my skills. 
