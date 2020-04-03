@@ -12,7 +12,7 @@ header:
       url: "./about"
 excerpt: "My name is Ian Hyzy, and I help users stay secure and collaborate better at work."
 intro: 
-  - excerpt: "At [Maven Wave](https://www.mavenwave.com/), I work with some of the world's largest G Suite clients to bring their legacy data to G Suite and ensure their users have an easy transition from their legacy programs."
+  - excerpt: "At Grubhub, I work hard to help users collaborate more efficiently and securely."
 
 feature_row:
   - image_path: assets/images/texas-senate-cropped.jpg
