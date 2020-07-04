@@ -53,7 +53,7 @@ Hey's [manifesto](https://hey.com/the-hey-way/) also lays out their overall visi
 
 > Marking things unread so you don’t forget to reply later. Starring or flagging something to mean one of a dozen different things. Writing drafts to yourself because you have no where else to keep notes. The days of doing one thing to mean another are over. Hacky, roundabout workflows be gone. HEY gives you proper workflows for the way people email today.
 
-The most popular Gmail add-ons do things like add send-later queues, better flagging machanisms, and note-taking systems. 
+The most popular Gmail add-ons do things like add send-later queues, better flagging mechanisms, and note-taking systems. 
 
 To close out this section, here is Gmail's Star settings, which I will also add do not work on mobile:
 
