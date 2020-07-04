@@ -9,10 +9,10 @@ classes: wide
 comments: true
 ---
 
-# Hey! There's a hot new up-and-comer to the stagnant, atrophied email space!
+## Hey! There's a hot new up-and-comer to the stagnant, atrophied email space!
 I follow the creators of Basecamp - David Heinemeier Hansson and Jason Fried - on Twitter, and a few months ago I saw they were launching an email service in the summer. I had been using Gmail for over a decade and thought it might be time to look into what other options are out there - is someone doing email better than Google? I'm not an Outlook fan, so that's off the list, but Hey's features looked enticing, so after I got the invite code so I wanted to give it a good try.
 
-# Let's compare: Hey vs Gmail
+## Let's compare: Hey vs Gmail
 *TL;DR: I'm still on Gmail, but probably not for much longer*
 
 I tried Hey a few weeks before it became publicly available, but from what I can tell it's largely the same as what was shipped to the public. What was shipped to the public? An exceptionally well designed, thoughtfully opinionated, new take on email.
@@ -36,7 +36,9 @@ The Speakeasy code is something I don't have a need for, but I would be very hap
 There's a lot of other features in Hey I'm not going to cover here, but I liked (almost- see below) everything I saw, whether I used it or not.
 
 ### Thoughtful, appealing, opinionated design
-Hey's design is also better than Gmail's and light-years ahead of ProtonMail. Going back to Gmail, it really does "feel" and look like an old app - even after the re-design Gmail rolled out in the last year it still lags, features endless, confusing settings, and looks like it only got a fresh coat in paint since it began - not a re-imagining of how people use email today rather than how they used it in 2004. I won't dedicate this post to the UX disaster that is the Gmail settings pages, but Hey made me realize how much better it could really be. Hey makes using all of their built-in groups like The Feed and The Paper Trail dead simple, and tags are as easy as any other app.
+Hey's design is also better than Gmail's and light-years ahead of ProtonMail. Going back to Gmail, it really does "feel" and look like an old app - even after the re-design Gmail rolled out in the last year it still lags, features countless confusing settings, and looks like it only got a fresh coat in paint since it was created. It's not a reflection of how people use email today, it's a reflection of how they used it in 2004. 
+
+I won't dedicate this post to the UX disaster that is the Gmail settings pages, but Hey made me realize how much better it could really be. Hey makes using all of their built-in groups like The Feed and The Paper Trail dead simple, and tags are as easy as any other app.
 
 To boil it down, everything is easier in Hey. It takes fewer clicks to perform most actions; less reach of the thumb on mobile for common tasks. Hey takes an opinionated stance on some functionality, and it's all good choices.
 
@@ -51,13 +53,15 @@ Hey's [manifesto](https://hey.com/the-hey-way/) also lays out their overall visi
 
 > Marking things unread so you don’t forget to reply later. Starring or flagging something to mean one of a dozen different things. Writing drafts to yourself because you have no where else to keep notes. The days of doing one thing to mean another are over. Hacky, roundabout workflows be gone. HEY gives you proper workflows for the way people email today.
 
-Presented without comment is this section of Gmail's general settings page:
+The most popular Gmail add-ons do things like add send-later queues, better flagging machanisms, and note-taking systems. 
+
+To close out this section, here is Gmail's Star settings, which I will also add do not work on mobile:
 
 ![Photo of Gmail stars setting](/assets/images/gmail-stars.jpg)
 
 ### Seriously, people and support matter
 
-I also want to mention how impactful it is to have two "faces" for a product that are generally very good about communicating to the public, being open about what they believe and what they're trying to do, and [picking fights with the bad guys](https://www.theverge.com/2020/6/18/21296180/apple-hey-email-app-basecamp-rejection-response-controversy-antitrust-regulation) when they can. Compared to large companies that force comms people to craft sterile PR statements and never interact openly or honestly with their customers, it boosts my confidence in the product.
+I also want to mention how impactful it is to have two "faces" for a product that are generally very good about communicating to the public, being open about what they believe and what they're trying to do, and [picking fights with the bad guys](https://www.theverge.com/2020/6/18/21296180/apple-hey-email-app-basecamp-rejection-response-controversy-antitrust-regulation) when they can. Compared to large companies that force comms people to craft sterile PR statements and never interact openly or honestly with their customers, it makes me happy to see.
 
 Considering support, I would rather wait days for a good answer to my question than get a useless response quickly. I have had almost nothing but awful experiences with Google One (paid consumer Google account) __and__ G Suite support, and from what I hear the Microsoft side of the fence is not much better in this regard. Other, smarter, more experienced people have probably written more about this and it isn't the point of this post so I won't belabor the point.
 
@@ -81,9 +85,11 @@ Hey doesn't [offer PGP or any fancy encryption  options](https://hey.com/securit
 ## The Dealbraker(s)
 
 ### Calendar (which wouldn't be a deal breaker if not for...)
-Once I realized there was not an easy way to sync my Google calendar to emails I get in Hey (if I were to use Hey exclusively) I realized this wouldn't work. I get too many event emails to manage manually, and I hate copying in event data. Gmail's ability to auto-create events works wonderfully and I do not want to live without it. I would be willing to use a third party solution to accomplish this (or use a Hey calendar!) but...
+Once I realized there was not an easy way to sync my Google calendar to emails I get in Hey (if I were to use Hey exclusively) I realized this wouldn't work. I get too many event emails to manage manually, and I hate copying in event data or manually downloading/uploading .ics files. 
 
-### ...the lack of an API
+Gmail's ability to auto-create events works wonderfully and I do not want to live without it. I would be willing to use a third party solution to accomplish this (or use a Hey calendar!) but...
+
+### ...Hey lacks an API
 Hey is committed to being open, and I don't doubt they will eventually provide an API for Hey. But it doesn't exist now, and that bugs me a lot.
 
 ## So what?
