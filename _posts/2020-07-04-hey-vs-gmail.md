@@ -1,5 +1,5 @@
 ---
-title: "Investigating alternative email providers"
+title: "Taking a look at Hey"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
