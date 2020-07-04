@@ -10,7 +10,7 @@ comments: true
 ---
 
 ## Hey! There's a hot new up-and-comer to the stagnant, atrophied email space!
-I follow the creators of Basecamp - David Heinemeier Hansson and Jason Fried - on Twitter, and a few months ago I saw they were launching an email service in the summer. I had been using Gmail for over a decade and thought it might be time to look into what other options are out there - is someone doing email better than Google? I'm not an Outlook fan, so that's off the list, but Hey's features looked enticing, so after I got the invite code so I wanted to give it a good try.
+I follow the creators of Basecamp - David Heinemeier Hansson and Jason Fried - on Twitter, and a few months ago I saw they were launching an email service in the summer. I had been using Gmail for over a decade and thought it might be time to look into what other options are out there - is someone doing email better than Google and Microsoft? Hey's features looked enticing, so after I got the invite code so I wanted to give it a try.
 
 ## Let's compare: Hey vs Gmail
 *TL;DR: I'm still on Gmail, but probably not for much longer*
