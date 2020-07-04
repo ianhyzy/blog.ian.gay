@@ -24,7 +24,7 @@ Hey nailed the basics one would expect - apps for all platforms that work well, 
 ### Several unique or useful built-in features
 
 #### Control over who emails you to begin with
-Signing up and setting up forwarding from Gmail was easy, and I instantly loved the Screener feature. This puts emails from people who have never contacted you before in a special queue, and you can approve or deny them from hitting your **imbox** - you can even auto-categorize them with one click. This is a pain at first but very quickly helped keep my inbox clean, and would have prevented the situation I found my self in recently where someone used a bot to sign my email up for literally thousands of email distros.
+Signing up and setting up forwarding from Gmail was easy, and I instantly loved the Screener feature. This puts emails from people who have never contacted you before in a special queue, and you can approve or deny them from hitting your **imbox** - you can even auto-categorize them with one click. This is a pain at first but very quickly helped keep my inbox clean, and would have prevented the situation I found my self in recently where someone used a bot to sign my email up for literally thousands of email marketing lists.
 
 The Screener infinitely better than Gmail's AI-powered Categories (which I have disabled because they suck). Of all the features of Hey, this is the one that clicked and I saw the value of instantly.
 
@@ -84,7 +84,7 @@ Hey doesn't [offer PGP or any fancy encryption  options](https://hey.com/securit
 
 ## The Dealbraker(s)
 
-### Calendar (which wouldn't be a deal breaker if not for...)
+### Calendar *(which wouldn't be a deal breaker if not for the fact that...)*
 Once I realized there was not an easy way to sync my Google calendar to emails I get in Hey (if I were to use Hey exclusively) I realized this wouldn't work. I get too many event emails to manage manually, and I hate copying in event data or manually downloading/uploading .ics files. 
 
 Gmail's ability to auto-create events works wonderfully and I do not want to live without it. I would be willing to use a third party solution to accomplish this (or use a Hey calendar!) but...
@@ -93,4 +93,4 @@ Gmail's ability to auto-create events works wonderfully and I do not want to liv
 Hey is committed to being open, and I don't doubt they will eventually provide an API for Hey. But it doesn't exist now, and that bugs me a lot.
 
 ## So what?
-I went back to Gmail (and am currently trying ProtonMail, which appears to be immensely worse than both in every way except security). But I'm keeping a close eye on Hey, and once the product matures, as I'm sure it will, I will be excited to give it a go. If you don't mind the calendering hiccups or lack of API, I would strongly encourage you to give Hey a shot - you'll probably like it.
+I went back to Gmail (and am currently trying ProtonMail, which appears to be immensely worse than both in every way except security). But I'm keeping a close eye on Hey, and once the product matures, as I'm sure it will, I will be excited to give it another go. If your calendaring workflow won't be affected and you don't mind the lack of API, I would strongly encourage you to give Hey a shot - you'll probably like it.
