@@ -132,6 +132,8 @@ Now you need email! Just give up on that one. Don't even think about it.
 
 ## Closing thoughts
 
-There is no money in open source. There is little interest, outside of a select few firms in a handful of European countries, in breaking the Microsoft/Google stranglehold on the office/groupware suite. It is a David vs. Goliath story where even David is kind of asshole and kicked a puppy on the way to fight Goliath.
+There is no money in consumer-oriented open source. If a business cannot use you, you go broke or limp along on donations.
+
+There is little interest, outside of a select few firms in a handful of European countries, in breaking the Microsoft/Google stranglehold on the office/groupware suite. It is a David vs. Goliath story where even David is kind of asshole and kicked a puppy on the way to fight Goliath.
 
 I wish nothing but the best of luck to the people working on Libreoffice, Nextcloud, and the rest - I really do. As much as I'll critize them I'm rooting for them to succeed. The worlds needs more, better open source projects and people to build them. I just wish the world wanted them as badly as it needs them.
