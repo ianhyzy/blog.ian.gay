@@ -13,12 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ian's Portfolio
+
+# bundle exec jekyll serve --drafts
+
+title: Ian Hyzy.me
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  My personal website, with tutorials on Glide, G Suite, blog posts, and more.
 twitter_username: ianhyzy
 github_username: ianhyzy
 minimal_mistakes_skin: mint
@@ -32,7 +33,7 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago
-repository: ianhyzy/mm-github-pages-starter
+repository: ianhyzy/ianhyzy.me
 
 include:
   - _pages
@@ -61,11 +62,8 @@ plugins:
 author:
   name   : "Ian Hyzy"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "G Suite guru / compulsive tinkerer"
+  bio    : "G Suite specialist & compulsive tinkerer"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/ianhyzy"
@@ -96,7 +94,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: false
       share: true
       related: false
@@ -114,3 +112,14 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+analytics:
+  provider: "custom"
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "ianhyzy-me"
+
+twitter:
+  username: "ianhyzy"

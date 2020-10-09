@@ -1,5 +1,5 @@
 ---
-title: "Is Open Source dead for teams? Was it ever alive?"
+title: "Investigating Open Source apps for teams"
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
@@ -9,16 +9,10 @@ classes: wide
 comments: true
 ---
 
-# The Problem
-Over the past few weeks, I've spent a lot of time investigating the options for teams that want to work with entirely open source, self-hostable software. Like many other projects that tried this, we wanted a way to work together while still owning our data. Our team had a unique extra need compared to most of these projects, however - we wanted whatever we made to be usable by people who are not tech-savvy at all. 
+# The extinct animal, or the Open-Source team
+Over the past few weeks, I've spent a lot of time investigating the options for teams that want to work with entirely Open Source, self-hostable software. I would be giving documentation to people who may not be tech savvy at all, so any app we chose needed to be easy to install, update, and keep secure. It's a tall order, but one I thought I could fufill "good enough" with enough research and careful planning.
 
-We wanted both the setup of server software and use of the clients to be so easy, anyone could do it. The software needed to be secure by default, comes with all the features we need, and make updating it as simple as possible. This is what I set out to find, knowing that I would need to settle for "good enough" in a lot of areas.
-
-I failed. There is nothing out there that solves *even a fraction* of a team's needs "good enough", let alone as well as paid solutions. As open source software flourishes in datacenters, it falters on the devices people actually touch. It's a tale as old as open source itself, but it was disappointing to see just how little progress has been made. What is the point of software freedom if the only free people are the tech teams of businesses?
-
-These are my notes from a field exploration of the prospect of running a modern, generalized team with only open source software (The basic things you would expect from Office/G Suite, basically - Email, Calendar, Document editing, file sync, you get the idea). 
-
-If you are committed to going open source no matter the cost, you may find some useful information here. If you're in the walled garden of Google, Microsoft, or Apple, find yourself swearing at their deficiencies and looking for alternatives, I think you'll find a few reasons to stay.
+I failed. There is nothing out there that solves even a fraction of a team's needs "good enough", let alone as well as a paid solution. As Linux thrives in datacenters, webservers, and databases, it falters on projects people actually want to use. These are my notes from a field exploration of the prospect of taking a team fully FOSS.
 
 ### Starting (not so simple) - Chat
 I started with chat; wanting a replacement for Slack. I like Slack a lot, and expected that other software would not be as mature. I also had a very good idea of what I would want, ideally, from a chat app:
@@ -48,41 +42,41 @@ I looked at these options:
 All except two were non-starters. Here are the apps that didn't make the cut to Round 2:
 
 #### Zulip
-Zulip was easy to install and the official Zulip client can connect to self-hosted servers, which was a great start. Zulip uses a unique threading system that takes getting used to, but some find very useful and I could see the utility of it. For people unfamiliar with the way it works, it's not a hinderance to basic use. Zulip is open source and seemed to welcome contributions, but wasn't a busy repo.
+Zulip was easy to install and the offical Zulip client can connect to self-hosted servers, which was a great start. Zulip uses a unique threading system that takes getting used to, but that wasn't a dealbreaker. It was open soruce and seemed to welcome contributions, but wasn't a busy repo.
 
-The ultimate issue with Zulip is that it was just *too* simple. Updating looked like a chore, there was no E2EE (a server admin could verify easily export all messages), no federation, no built in video calls, and the list goes on. Zulip was too restrictive; we would be asking Slack users to give up far too much when switching. The unique UX of Zulip was also a concern.
+The ultimate issue with Zulip is that it was just too simple. Updating looked like a chore, there was no E2EE (a server admin could verify easily export all messages), no federation, no built in video calls, the list goes on. Zulip was too restrictive; we would be asking Slack users to give up far too much when switching.
 
 #### Mattermost
 
-I disqualified Mattermost somewhat quickly, despite its many features and apparent benefits. One look at Mattermosts's [install guide](https://docs.mattermost.com/install/install-ubuntu-1804.html) basically ensures that the person I had in mind for installing the software - someone without Linux experience - would fail in the installation process. I was disappointed as Mattermost seemed stable and feature rich, and I may revisit it later to see if there's a better way to install and keep all those components updated (I found a bash script to do exactly what I had in mind, but it was two years old), but for now it was off the list.
+I disqualified Mattermost somewhat quickly. I was looking for a chat solution someone who had never touched a SSH console before could muddle through installing and upgrading with enough help - one look at Mattermosts's [install guide](https://docs.mattermost.com/install/install-ubuntu-1804.html) basically ensures that person would fail. I was dissapointed as Mattermost seemed stable and feature risk, and I may revisit it later to see if there's a better way to install and keep all those components updated, but for now it was off the list.
 
 #### Twake
 
 Twake was brought to my attention the day it was open-sourced. It's a newcomer but has many very compelling features, like a built-in calendar, tasks/kanban board, file sharing, and something no other option on this list has - an attractive UI! It seemed to not only solve our chat problem, but several other problems as well, which was very exciting. 
 
-Unfortunately, newness comes with some growing pains - docs are almost non-existent, what little docs were there were wrong for installation (which was otherwise easy), and I hit several bugs while using it. Despite these issues, I am keeping Twake installed and plan on keeping it updated. If the bugs can be squashed it will be an extremely compelling option, and the dev team was very responsive to the issue requests I filed. It's one to keep an eye on as it matures.
+Unfortuantely, newness comes with some gorwing pains - docs are almost non-existent, what little docs were there were wrong for installation (which was otherwise easy), and I hit several bugs while using it. Despite these issues, I am keeping Twake installed and plan on keeping it updated. If the bugs can be squashed it will be an extremely compelling option, and the dev team was very responsive to the issue requests I filed. It's one to keep an eye on as it matures.
 
 #### Wire
 
 Like Mattermost, Wire is an __enterprise-y__ chat app. The install process is too much for someone who will need their hand held getting PuTTy installed. Sorry, Wire.
 
 #### Matrix / Synapse / Riot / Element
-I really wanted to like Matrix, I admit. It's on fire in the open source world, has a wide ecosystem of tools and support, and being both encryption and federation focused seemed like a fantastic fit. Unfortunately, the install process is not fun. There are multiple methods of installation and I wouldn't be comfortable trusting a non-techie with any of them. Matrix's community came to the rescue here though - there are several very affordable hosting options for Matrix servers, or 3rd party easy install methods. I decided that Matrix had a compelling enough feature set to outweigh the installation hump so I installed it with the ansible method.
+I really wanted to like Matrix, I admit. It's on fire in the open soruce world, has a wide ecosystem of tools and support, and being both encryption and federation focused seemed like a fantastic fit. Unfortuantely, the intall process is not fun. There are multiple methods of installation and I wouldn't be comfortable trusting a non-techie with any of them. Matrix's community came to the rescue here though - there are several very affordable hosting options for Matrix servers, or 3rd party easy install methods. I decided that Matrix had a compelling enough featue set to outweigh the installation hump so I installed it with the ansible method.
 
-Several hours later, I had a working install. It was not a fun or easy process, but it worked. I opened Riot and was disappointed in a few minutes. Threading did not work well, the mobile apps seemed janky, and I spoke to another more experienced sysadmin who seconded my concerns about the overall stability and UX of Riot baed on his experience.
+Several hours later, I had a working install. It was not a fun or easy process, but it worked. I opened Riot and was dissapointed in a few minutes. Threading did not work well, the mobile apps seemed janky, and I spoke to another more experienced sysadmin who seconded my concerns about the overall stability and UX of Riot baed on his experience.
 
-One other benefit of the (rough, complex) install process is that once you set it up, it's very easy to update. You can just run the ansible recipe again. It also includes many of the other services or plugins a server owner would want, which is extremely useful.
+One other benefit of the (rough, complex) install process is that once you set it up, it's very easy to update. You can just run the ansible recipie again. It also includes many of the other services or plugins a server owner would want, which is extremely useful.
 
-Recently, Riot re-branded to be called Element, and updated their UX, which is now a bit nicer. There are still a few too many bugs and gotchas with Matrix / Element to recommend it to a newbie, but it's another case where I'm keeping a close eye on it and waiting to see if the bugs can be ironed out.
+Recently, Riot re-branded to be called Element, and updated their UX, which is now a bit nicer. There are still a few too many bugs and gotchas with Matrix / Element to reccomend it to a newbie, but it's another case where I'm keeping a close eye on it and waiting to see if the bugs can be ironed out.
 
 #### Rocket Chat 
 Rocket Chat is more similar to Mattermost or Zulip than the other options here, but it had several advantages. Installation is easy, their documentation is complete, the desktop and mobile UX is pretty good, it has E2EE and federation on the roadmap, and threaded messaging __mostly__ works. 
 
 It ticked all the boxes, and I gave it a spin with another test user to try it out. Out of all the apps so far, Rocket Chat is the best overall.
 
-Unfortunately, the same quality issues that plagued Element/Riot and Twake raised their head here as well, but usually in a less severe manner. Given all the option here, I feel that Rocket Chat strikes the best balance of a tool that's open source, easy enough for non-nerds to install, and still looks good doing it.
+Unfortuntaely, the same quality issues that plauged Element/Riot and Twake raised their head here as well, but usually in a less severe manner. Given all the option here, I feel that Rocket Chat strikes the best balance of a tool that's open source, easy enough for non-nerds to install, and still looks good doing it.
 
-But that's just it - it's still not quite *good enough*. Imagine you talk to a team with a 500 people on Slack. You want them to move everyone over to a new system that they 1) have to pay for 2) maintain 3) worry about and all they're getting is control over their data, a very vague and intangible idea, and a worse product. Rocket Chat has no compelling features Slack doesn't have, there's no pull to use it other than it's more competent than everything else. 
+But that's just it - it's still not quite *good enough*. Imagine you talk to a team with a 500 people on Slack. You want them to move everyone over to a new system that they 1) have to pay for 2) maintain 3) worry about and all they're getting is control over their data, a very vauge and intagible idea, and a worse product. Rocket Chat has no compelling featues Slack doesn't have, there's no pull to use it other than it's more competent than everything else. 
 
 This was a common theme as I would later realize.
 
