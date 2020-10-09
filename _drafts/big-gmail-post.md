@@ -67,7 +67,7 @@ In my experience, these are the most common things users change, so having them 
 ### 🤖 A robust yet simple API
 Gmail comes with a full-featured API that's easy to use. Look at the Microsoft docs for API access to Exchange (Are you on-prem? Hybrid? O365? Do you want to use the old API, the new API, or the Graph API? Are you in China?) and then get back to me after you're done crying and polishing off a handle of whisky.
 
-Gmail's simplicity more than makes up for the few small quirks it has. It gets even easier if you use App Script - send an email with `MailApp.sendMail("subjct","Your body content")`.
+Gmail's simplicity more than makes up for the few small quirks it has. It gets even easier if you use App Script - send an email with `MailApp.sendMail("subject","Your body content")`.
 
 ## 🤮 What sucks about Gmail
 
@@ -76,85 +76,7 @@ Gmail has been around since 2004, and some things that made sense in 2004 don't 
 ### 🗑️ The Settings
 **Settings in Gmail are a nightmare.**
 
-The new sidebar that appears is a nice band-aid to help make commonly used settings easier to change (as discussed earlier), but it's just that - a band aid.[^2] Let's break down the main settings page and see what issues we find.
-
-[^2]: As of this writing, the question mark icon that's supposed to explain what "conversation mode" is isn't working.
-
-#### 🗑️ Settings - General
-"General" is a vague term, and a bunch of settings are shoved into general that make them hard to locate. Let's go through each page of settings and see if things make sense, because in my experience people struggle to find most settings.
-
-* Language & Phone number format
-  * Makes sense to be in General, these don't fit elsewhere.
-* maximum page size
-  * This setting affects the page size on not just the inbox, but also when searching and in label views, so this makes sense to have in General.
-* Undo Send
-  * This only becomes relevant when sending a message
-* Default reply behavior
-  * Again, only relevant when sending (replying to) a message
-* Hover actions
-  * Affects all views of messages; makes sense to have in General
-* Send and Archive
-  * Again, only relevant when sending (replying to) a message
-* Default text style
-  * Again, only relevant when sending a message - can you sense a pattern here?
-* Images
-  * Affects message viewing
-* Dynamic email
-  * ~~Shouldn't exist~~
-  * Affects message viewing
-* Grammar
-  * Only relevant when sending a message
-* Spelling
-  * Only relevant when sending a message
-* Auto-advance
-  * Affects message viewing in multiple screens, makes sense to have in general
-* Autocorrect
-  * Only relevant when sending a message
-  * No, I didn't screw up the order - this setting is separated from Grammar and Spelling by one unrelated item even though it's almost identical in function
-* Smart Compose
-  * Only relevant when sending a message
-* Smart Compose personalization
-  * Only relevant when sending a message
-* Experimental Access
-* Conversation View
-  * Only relevant when viewing a message
-* Nudges
-  * Only relevant in the Inbox
-* Preview Pane
-  * Does not control if preview pane is on/off, it controls how much time is required to elapse to mark a message as read when it's opened in the preview pane.
-  * Only relevant when viewing a message
-* Desktop notifications
-  * Good in general.
-* Stars
-  * Easily the worst, most user-hostile setting in Gmail. I think this is so bad it's getting it's own section.
-* Keyboard shortcuts
-  * Toggle keyboard shortcuts on/off. Good fit for general.
-* Button labels
-  * Another good fit for General. We're on a roll.
-* My picture
-  * Tells you you can't change your picture and links you to your About Me page in Google
-  * A lot of thoughts on this, none of which can fit so - sure, keep this here. Whatever.
-* Create contacts for auto-complete
-  * A close number two to Stars in the contest for worst setting in Gmail. Also gets its own section below!
-* Importance signals for ads
-  * Links to Google's ad settings page. Makes sense.
-* Signature
-  * Only relevant when sending a message
-* Personal level indicators
-  * > Display an arrow ( › ) by messages sent to my address (not a mailing list), and a double arrow ( » ) by messages sent only to me.
-  * I find this just adds noise to the message displays, but it's pretty clear about what it does (a screenshot would be good to add, but a common theme with Google is they resist using screenshots almost as a rule)
-* Snippets
-  * > Show snippets of the message (like Google web search!).
-  * Like *Google web search* you say? Exciting!
-  * Again, a screenshot would be helpful to show users what this looks like.
-* Vacation responder
-  * A good fit for general, and a nice way to end all these settings.
-
-This list seems like a lot, because *it is a lot*. It is, by far, the longest settings screen in Gmail. One fix I think would help is splitting off anything only relevant when composing a message into a new settings tab - perhaps named Composing, or something more creative. This would take a huge chunk of settings out of General.
-
-Breaking it up further, some settings are only relevant to how messages are viewed, and some are used to control the Gmail UI. It may be helpful to split one of these into their own tab. Even adding groupings inside of General would help.
-
-Okay, now on the two *stars* of the above list that got a special callout:
+The new sidebar that appears is a nice band-aid to help make commonly used settings easier to change (as discussed earlier), but it's just that - a band aid. Gmail settings are confusing to navigate and don't present options anywhere near as well as they could. But let's focus on the two worst settings:
 
 #### 🗑️ The many, many problems with Stars
 The Stars setting is the worst in Gmail, perhaps tied only with the Contacts importing. Here is the description:
@@ -185,5 +107,7 @@ When users change their name, autocomplete may not reflect if they were already 
 
 These auto-imports are not exposed anywhere in Gmail, they're in Contacts, and they're just called Other Contacts, with no obvious connection to Gmail unless you know what to look for. Many users don't go into Contacts much (or ever!) because they don't need to - they rely on Autocomplete!
 
-My suggestion for this would be tto auto-update the autocomplete contact when the source user is updated (I'm surprised this isn't the default behavior).
+My suggestion for this would be to auto-update the autocomplete contact when the source user is updated (I'm surprised this isn't the default behavior).
 
+## A Vision for email that's a decade old
+The fundamentals of Gmail haven't changed since it was released - this is mostly good! Email is the only really standard digital communication tool that everyone has and works for billions of people. On the other hand, the way people use email has changed a lot, and the feature additions to Gmail have not kept up with 
