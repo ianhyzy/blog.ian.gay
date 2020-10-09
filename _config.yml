@@ -16,7 +16,7 @@
 
 # bundle exec jekyll serve --drafts
 
-title: Ian Hyzy.me
+title: ian.gay
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
   My personal website, with tutorials on Glide, G Suite, blog posts, and more.
@@ -27,7 +27,7 @@ search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.20.2"
+theme: jekyll-theme-cayman
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
