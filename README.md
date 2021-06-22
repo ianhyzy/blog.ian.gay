@@ -1,3 +1,3 @@
-# My Blog
+# My (old) Blog
 
-My personal blog, made with Jekyll and the Minimal Mistakes theme, hosted by GitHub.
+My (old) personal blog, made with Jekyll and the Minimal Mistakes theme, hosted by GitHub.
